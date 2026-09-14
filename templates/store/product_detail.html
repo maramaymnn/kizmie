@@ -1,0 +1,298 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ product.name }} - Kimzie</title>
+
+<link rel="stylesheet" href="{% static 'css/OnlineStorePage1.css' %}">
+
+</head>
+
+<body>
+<!-- NAVBAR -->
+<nav>
+
+    <button class="menu-btn" id="openBtn">☰</button>
+
+    <h2 class="logo">
+        <a href="{% url 'home' %}">Kimzie</a>
+    </h2>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="nav-icons">
+        <button class="nav-icon" id="searchBtn">⌕</button>
+
+        <a href="#" class="nav-icon" id="cartBtn">
+            🛒
+            <span id="cartCount">0</span>
+        </a>
+    </div>
+
+</nav>
+
+
+<!-- SEARCH -->
+<div class="search-box" id="searchBox">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a product..."
+    >
+
+    <div id="searchResults"></div>
+
+</div>
+
+
+<!-- SIDE MENU -->
+<div class="side-menu" id="sideMenu">
+
+    <button class="close-btn" id="closeBtn">×</button>
+
+    <div class="menu-content">
+
+        <button class="shop-all-btn">
+            Shop All
+        </button>
+
+        <div class="categories">
+
+            <a href="{% url 'bags1' %}">
+                Bags
+            </a>
+
+            <a href="{% url 'wallets' %}">
+                Wallets
+            </a>
+
+            <a href="{% url 'belts' %}">
+                Belts
+            </a>
+
+        </div>
+
+        <a href="#">Contact</a>
+        <a href="#">Our Policy</a>
+
+    </div>
+
+</div>
+
+
+<!-- SIDE CART -->
+<div class="side-cart" id="sideCart">
+
+    <div class="cart-nav">
+
+        <h3>Shopping Cart</h3>
+
+        <button class="close-btn" id="closeCartBtn">
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="cart-items" id="cartItems">
+
+        <p class="empty-msg">
+            Your cart is empty
+        </p>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="total-price">
+
+            <span>Total:</span>
+
+            <span id="cartTotal">
+                LE 0.00
+            </span>
+
+        </div>
+
+        <a
+            href="{% url 'checkout' %}"
+            class="checkout-btn"
+            id="checkoutBtn"
+        >
+            Checkout
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- PRODUCT DETAILS -->
+
+<main class="product-detail-page">
+
+    <div class="product-detail-image">
+
+        <img
+            src="{{ product.image_url }}"
+            alt="{{ product.name }}"
+        >
+
+    </div>
+
+
+    <div class="product-detail-info">
+
+        <p class="product-detail-category">
+            {{ product.get_category_display }}
+        </p>
+
+        <h1>
+            {{ product.name }}
+        </h1>
+
+        <p class="product-detail-price">
+            LE {{ product.price }}
+        </p>
+
+        {% if product.description %}
+
+            <p class="product-detail-description">
+                {{ product.description }}
+            </p>
+
+        {% else %}
+
+            <p class="product-detail-description">
+                Discover the perfect addition to your collection
+                with this elegant Kimzie piece.
+            </p>
+
+        {% endif %}
+
+
+        {% if product.stock > 0 %}
+
+            <p class="product-stock">
+                In stock
+            </p>
+
+            <button
+                class="btn-add product-detail-add"
+                data-product-id="{{ product.id }}"
+            >
+                Add to cart
+            </button>
+
+        {% else %}
+
+            <p class="product-stock out">
+                Out of stock
+            </p>
+
+            <button
+                class="btn-add product-detail-add"
+                disabled
+            >
+                Out of Stock
+            </button>
+
+        {% endif %}
+        <a
+         href="javascript:history.back()"
+         class="back-to-shop"
+         >
+         ← Back to shopping
+        </a>
+
+    </div>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="main-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-col">
+
+            <h3 class="footer-logo">
+                kimzie
+            </h3>
+
+            <p>
+                Your ultimate destination for trendy and
+                high-quality bags, wallets, and belts.
+            </p>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4>follow us</h4>
+
+            <div class="social-links">
+
+                <a href="#" target="_blank">
+                    Instagram
+                </a>
+
+                <a href="#" target="_blank">
+                    facebook
+                </a>
+
+                <a href="#" target="_blank">
+                    tiktok
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4>payment methods</h4>
+
+            <div class="payment-methods">
+
+                <span>💵 Cash on Delivery</span>
+
+                <span>💳 Credit / Debit Card</span>
+
+                <span>📱 Vodafone Cash / Instapay</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            &copy; 2026 kimzie Store. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- PRODUCT DATA FOR JAVASCRIPT -->
+
+{{ products|json_script:"products-data" }}
+
+<script src="{% static 'js/Script1.js' %}"></script>
+</body>
+</html>

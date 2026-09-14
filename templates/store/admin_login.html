@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kimzie - Admin Login</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/OnlineStorePage1.css' %}">
+</head>
+
+<body>
+
+    <div class="admin-login-page">
+
+        <div class="admin-login-box">
+
+            <h1>Kimzie</h1>
+
+            <h2>Admin Login</h2>
+
+            {% if error %}
+                <div class="admin-login-error">
+                    {{ error }}
+                </div>
+            {% endif %}
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                >
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+            </form>
+
+            <a href="{% url 'home' %}">
+                ← Back to Store
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

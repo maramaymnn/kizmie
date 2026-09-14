@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimzie - Checkout</title>
+    <link rel="stylesheet" href="{% static 'css/OnlineStorePage1.css' %}">
+</head>
+<body>
+
+    <nav>
+        <h2 class="logo">
+            <a href="{% url 'home' %}">Kimzie</a>
+        </h2>
+    </nav>
+
+    <main class="checkout-container">
+
+{% if order_success %}
+
+    <div class="order-success">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h1>Order Confirmed!</h1>
+
+        <p>
+            Thank you for your order, {{ order.full_name }}!
+        </p>
+
+        <p>
+            Your order has been successfully placed.
+        </p>
+
+        <p>
+            <strong>Order #{{ order.id }}</strong>
+        </p>
+
+        <p>
+            <strong>Total: LE {{ order.total_price }}</strong>
+        </p>
+
+        <p>
+            <strong>Payment: {{ order.payment_method }}</strong>
+        </p>
+
+        <a href="{% url 'home' %}">
+            Continue Shopping
+        </a>
+
+    </div>
+
+    <script>
+        localStorage.removeItem('cart');
+    </script>
+
+{% else %}
+
+    <h1>Checkout</h1>
+
+    <div class="checkout-content">
+
+            <!-- Order Summary -->
+            <section class="order-summary">
+                <h2>Your Order</h2>
+
+                <div id="checkoutItems">
+                    <!-- Products are displayed automatically by JavaScript -->
+                </div>
+
+                <div class="checkout-total">
+                    <span>Total:</span>
+                    <span id="checkoutTotal">LE 0.00</span>
+                </div>
+            </section>
+
+
+            <!-- Customer Information -->
+            <section class="customer-info">
+
+                <h2>Customer Information</h2>
+
+                {% if error %}
+                <div class="checkout-error">
+                    {{ error }}
+                </div>
+                {% endif %}
+
+                <!-- Checkout Form -->
+                <form id="checkoutForm" method="POST" action="{% url 'checkout' %}">
+
+                    {% csrf_token %}
+
+                    <input
+                        type="hidden"
+                        name="cart_data"
+                        id="cartDataInput"
+                    >
+
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="full_name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+
+                    <label for="phone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+
+                    <label for="address">Address</label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        placeholder="Enter your full address"
+                        required
+                    ></textarea>
+
+
+                    <label for="payment">Payment Method</label>
+                    <select
+                    id="payment"
+                    name="payment_method"
+                    style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; margin-bottom: 20px;"
+                    required
+                    >
+                    <option value="">
+                        Select payment method
+                    </option>
+                    <option value="COD">
+                        Cash on Delivery
+
+                    </option>
+
+    
+                    <option value="Online">
+        
+                        Credit / Debit Card / Vodafone Cash / Instapay (Online)
+    
+                    </option>
+
+                </select>
+
+
+
+                <!-- Promo Code -->
+
+                <div class="promo-section">
+
+  
+                    <label for="promo_code">Promo Code</label>
+
+    
+                    <div class="promo-input">
+
+    
+                        <input
+    
+                        type="text"
+    
+                        id="promo_code"
+    
+                        name="promo_code"
+    
+                        placeholder="Enter promo code"
+                        >  
+                         <button type="button" id="applyPromoBtn">
+           
+                            Apply
+       
+                        </button>
+
+    
+                    </div>
+
+   
+                    <p id="promoMessage"></p>
+
+
+                </div>
+
+
+
+                <button
+   
+                type="submit"
+   
+                class="place-order-btn"
+                >
+                Place Order
+              </button>
+
+                </form>
+
+            </section>
+
+        </div>
+        {% endif %}
+
+    </main>
+
+
+    <script src="{% static 'js/Script1.js' %}"></script>
+
+</body>
+</html>

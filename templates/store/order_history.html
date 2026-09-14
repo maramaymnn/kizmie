@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimzie - My Orders</title>
+    <link rel="stylesheet" href="{% static 'css/OnlineStorePage1.css' %}">
+</head>
+<body>
+
+    <nav>
+        <h2 class="logo">
+            <a href="{% url 'home' %}">Kimzie</a>
+        </h2>
+    </nav>
+    <main class="checkout-container order-history-container">
+        <h1 class="order-history-title">My Order History</h1>
+        <div class="orders-list">
+            {% for order in orders %}
+            <div class="order-card">
+                <div class="order-header">
+                <h3>Order #{{ order.id }}</h3>
+                <span class="order-status">{{ order.status }}</span>
+            </div>
+
+            <div class="order-info">
+                <p><strong>Name:</strong> {{ order.full_name }}</p>
+                <p><strong>Phone:</strong> {{ order.phone }}</p>
+                <p><strong>Address:</strong> {{ order.address }}</p>
+                <p><strong>Date:</strong> {{ order.created_at|date:"Y-m-d H:i" }}</p>
+            </div>
+
+            <div class="order-items">
+                <strong>Items:</strong>
+                
+                {% for item in order.items.all %}
+                <div class="order-item">
+                     <div class="order-item-product">
+                        <img src="{{ item.product.image_url }}"
+                        alt="{{ item.product.name }}">
+                        <span>
+                            {{ item.product.name }} × {{ item.quantity }}
+                        </span>
+                    </div>
+                    <span class="order-item-price">
+                        LE {{ item.price }}
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="order-total">
+                <span>Total Amount:</span>
+                <span>LE {{ order.total_price }}</span>
+            </div>
+
+        </div>
+        {% empty %}
+
+        <div class="empty-orders">
+            <p>You haven't placed any orders yet.</p>
+            <a href="{% url 'home' %}" class="continue-shopping">
+                Start Shopping
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+
+
+</body>
+</html>

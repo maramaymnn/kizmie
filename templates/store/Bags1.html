@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Bags Collection</title>
+    <link rel="stylesheet" href="{% static 'css/OnlineStorePage1.css' %}">
+</head>
+<body>
+    <nav>
+        <button class="menu-btn" id="openBtn">☰ </button>
+        <h2 class="logo">
+            <a href="{% url 'home' %}">Kimzie</a>
+        </h2>
+        <div class="menu-overlay" id="menuOverlay"></div>
+        <div class="nav-icons">
+            <button class="nav-icon" id="searchBtn">⌕</button>
+            <a href="#" class="nav-icon" id="cartBtn">🛒<span id="cartCount">0</span></a>
+        </div>
+    </nav>
+    
+    <!-- صندوق البحث -->
+    <div class="search-box" id="searchBox">
+        <input type="text" id="searchInput" placeholder="Search for a product..."/>
+        <div id="searchResults"></div>
+    </div>
+
+     <!--side menu-->
+    <div class="side-menu" id="sideMenu">
+        <button class="close-btn" id="closeBtn">×</button>
+        <div class="menu-content">
+            <button class="shop-all-btn">
+                Shop All
+            </button>
+           <div class="categories">
+    <a href="{% url 'bags1' %}">Bags</a> 
+    <a href="{% url 'wallets' %}">Wallets</a>
+    <a href="{% url 'belts' %}">Belts</a>
+</div>
+            <a href="#">Contact</a>
+            <a href="#">Our Policy</a>
+            {% if user.is_authenticated and user.is_staff %}
+
+    <a href="/admin/">
+        Admin Dashboard
+    </a>
+
+    <a href="{% url 'admin_logout' %}">
+        Logout
+    </a>
+
+{% else %}
+
+    <a href="{% url 'admin_login' %}">
+        Admin Login
+    </a>
+
+{% endif %}
+        </div>
+    </div>
+
+    <div class="side-cart" id="sideCart">
+        <div class="cart-nav">
+            <h3>Shopping Cart</h3>
+            <button class="close-btn" id="closeCartBtn">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-msg">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>Total:</span>
+                <span id="cartTotal">LE 0.00</span>
+            </div>
+            <a href="{% url 'checkout' %}" class="checkout-btn" id="checkoutBtn">Checkout</a>
+        </div>
+    </div>
+
+    <main class="collection-page">
+        <h2 class="collection-title">Bags Collection</h2>
+        <div class="products-grid-two">
+
+    {% for product in category_products %}
+
+    <div class="product-card" data-product-id="{{ product.id }}">
+
+    <a href="{% url 'product_detail' product.id %}" class="product-link">
+
+        <div class="product-image-wrapper">
+
+            {% if product.is_on_sale and product.sale_price %}
+                <span class="sale-label">SALE</span>
+            {% endif %}
+
+            <img src="{{ product.image_url }}" alt="{{ product.name }}" />
+
+        </div>
+
+        <h3>{{ product.name }}</h3>
+
+    </a>
+
+    {% if product.is_on_sale and product.sale_price %}
+        <p class="price">
+            <span class="old-price">LE {{ product.price }}</span>
+            <span class="sale-price">LE {{ product.sale_price }}</span>
+        </p>
+    
+        {% else %}
+        
+    <p class="price">LE {{ product.price }}</p>
+    
+        {% endif %}
+
+    
+    {% if product.stock > 0 %}
+        
+    <button class="btn-add">Add to cart</button>
+    
+        {% else %}
+        
+    <button class="btn-add" disabled>Out of Stock</button>
+    
+        {% endif %}
+</div>
+{% empty %}
+ <p>No products available in this category yet.</p> 
+ {% endfor %}</div>
+        <div class="pagination">
+
+    <a href="{% url 'bags1' %}" class="page-link active">
+        1
+    </a>
+
+    <a href="{% url 'bags2' %}" class="page-link">
+        2
+    </a>
+
+    <a href="{% url 'bags3' %}" class="page-link">
+        3
+    </a>
+
+    <a href="{% url 'bags2' %}" class="page-arrow">
+        →
+    </a>
+
+</div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-logo">kimzie</h3>
+                <p>Your ultimate destination for trendy and high-quality bags, wallets, and belts.</p>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">facebook</a>
+                    <a href="#" target="_blank">tiktok</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>payment methods</h4>
+                <div class="payment-methods">
+                    <span>💵 Cash on Delivery</span>
+                    <span>💳 Credit / Debit Card</span>
+                    <span>📱 Vodafone Cash / Instapay</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 kimzie Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ربط الداتابيز بالـ JavaScript للبحث الفوري -->
+    {{ products|json_script:"products-data" }}
+   <script src="{% static 'js/Script1.js' %}"></script>
+</body>
+</html>

@@ -2,14 +2,19 @@ from pathlib import Path
 import os
 import dj_database_url
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'HIDDEN'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'HIDDEN')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.1.12']
+ALLOWED_HOSTS = [
+    "kizmie.vercel.app",
+    "localhost",
+    "127.0.0.1",
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -58,9 +63,8 @@ WSGI_APPLICATION = 'kimzie_store.wsgi.application'
 # Database
 DATABASES = {
     'default': dj_database_url.config(
-        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
         conn_max_age=600,
-        conn_health_checks=True,
     )
 }
 

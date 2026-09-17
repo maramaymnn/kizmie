@@ -1,0 +1,375 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimzie</title>
+
+    <link rel="stylesheet" href="{% static 'css/OnlineStorePage1.css' %}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+        <button class="menu-btn" id="openBtn"></button>
+
+        <h2 class="logo">
+            <a href="{% url 'home' %}">Kimzie</a>
+        </h2>
+
+        <div class="nav-icons">
+
+            <button class="nav-icon search-icon" id="searchBtn">
+                <span></span>
+            </button>
+
+            <a href="#" class="nav-icon cart-icon" id="cartBtn">
+    <span class="cart-symbol">🛒</span>
+    <span id="cartCount"></span>
+</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MENU OVERLAY ================= -->
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <div class="search-box" id="searchBox">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for a product..."
+        >
+
+        <div id="searchResults"></div>
+
+    </div>
+
+
+    <!-- ================= SIDE MENU ================= -->
+
+    <div class="side-menu" id="sideMenu">
+
+        <button class="close-btn" id="closeBtn">
+            ×
+        </button>
+
+        <div class="menu-content">
+
+            <button class="shop-all-btn">
+                Shop All
+            </button>
+
+            <div class="categories">
+
+                <a href="{% url 'bags' %}">
+                    Bags
+                </a>
+
+                <a href="{% url 'wallets' %}">
+                    Wallets
+                </a>
+
+                <a href="{% url 'belts' %}">
+                    Belts
+                </a>
+
+            </div>
+
+
+            <a href="{% url 'contact' %}">Contact</a>
+
+            <a href="{% url 'policy' %}">
+                Our Policy
+            </a>
+
+
+            {% if user.is_authenticated and user.is_staff %}
+
+                <a href="/admin/">
+                    Admin Dashboard
+                </a>
+
+                <a href="{% url 'admin_logout' %}">
+                    Logout
+                </a>
+
+            {% else %}
+
+                <a href="{% url 'admin_login' %}">
+                    Admin Login
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SIDE CART ================= -->
+
+    <div class="side-cart" id="sideCart">
+
+        <div class="cart-nav">
+
+            <h3>
+                Shopping Cart
+            </h3>
+
+            <button class="close-btn" id="closeCartBtn">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems">
+
+            <p class="empty-msg">
+                Your cart is empty
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="total-price">
+
+                <span>
+                    Total:
+                </span>
+
+                <span id="cartTotal">
+                    LE 0.00
+                </span>
+
+            </div>
+
+
+            <a
+                href="{% url 'checkout' %}"
+                class="checkout-btn"
+                id="checkoutBtn"
+            >
+                Checkout
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONTACT -->
+
+    <main class="contact-page">
+
+        <div class="contact-header">
+
+            <p class="contact-small-title">GET IN TOUCH</p>
+
+            <h1>Contact Us</h1>
+
+            <p>
+                We'd love to hear from you.
+                Send us a message and we'll get back to you as soon as possible.
+            </p>
+
+        </div>
+
+
+        {% if success %}
+            <div class="contact-success">
+                {{ success }}
+            </div>
+        {% endif %}
+
+
+        {% if error %}
+            <div class="contact-error">
+                {{ error }}
+            </div>
+        {% endif %}
+
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h2>Let's Talk</h2>
+                <p>
+                    Have a question about an order, product, delivery,
+                    or anything else? We're here to help.
+                </p>
+            </div>
+            <form method="POST" class="contact-form">
+
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        placeholder="Your phone number"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="contact-submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+  
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-col">
+
+                <h3 class="footer-logo">
+                    kimzie
+                </h3>
+
+                <p>
+                    Your ultimate destination for trendy
+                    and high-quality bags, wallets, and belts.
+                </p>
+
+            </div>
+
+
+            <!-- SOCIAL -->
+
+            <div class="footer-col">
+
+                <h4>
+                    Follow Us
+                </h4>
+
+                <div class="social-links">
+
+                    <a href="#" target="_blank">
+                        Instagram
+                    </a>
+
+                    <a href="#" target="_blank">
+                        Facebook
+                    </a>
+
+                    <a href="#" target="_blank">
+                        TikTok
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PAYMENT -->
+
+            <div class="footer-col">
+
+                <h4>
+                    Payment Methods
+                </h4>
+
+                <div class="payment-methods">
+
+                    <span>
+                        💵 Cash on Delivery
+                    </span>
+
+                    <span>
+                        💳 Credit / Debit Card
+                    </span>
+
+                    <span>
+                        📱 Vodafone Cash / Instapay
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Kimzie Store.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="{% static 'js/Script1.js' %}"></script>
+
+</body>
+</html>

@@ -4,36 +4,55 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kimzie</title>
 
     <link rel="stylesheet" href="{% static 'css/OnlineStorePage1.css' %}">
 </head>
 
 <body>
+<!-- ================= NAVBAR ================= -->
 
-    <!-- ================= NAVBAR ================= -->
+<nav>
 
-    <nav>
-        <button class="menu-btn" id="openBtn">☰</button>
+    <button class="menu-btn" id="openBtn"></button>
 
-        <h2 class="logo">
-            <a href="{% url 'home' %}">Kimzie</a>
-        </h2>
+    <h2 class="logo">
+        <a href="{% url 'home' %}">Kimzie</a>
+    </h2>
 
-        <div class="nav-icons">
+    <div class="nav-icons">
 
-            <button class="nav-icon" id="searchBtn">
-                ⌕
-            </button>
-
-            <a href="#" class="nav-icon" id="cartBtn">
-                🛒
-                <span id="cartCount">0</span>
+        {% if user.is_authenticated %}
+            <a href="{% url 'order_history' %}" class="account-link">
+                My Orders
             </a>
 
-        </div>
+            <a href="{% url 'logout' %}" class="account-link">
+                Logout
+            </a>
+        {% else %}
+            <a href="{% url 'login' %}" class="account-link">
+                Login
+            </a>
 
-    </nav>
+            <a href="{% url 'register' %}" class="account-link">
+                Create Account
+            </a>
+        {% endif %}
+
+        <button class="nav-icon search-icon" id="searchBtn">
+            <span></span>
+        </button>
+
+        <a href="#" class="nav-icon cart-icon" id="cartBtn">
+            <span class="cart-symbol">🛒</span>
+            <span id="cartCount"></span>
+        </a>
+
+    </div>
+
+</nav>
 
 
     <!-- ================= MENU OVERLAY ================= -->
@@ -72,7 +91,7 @@
 
             <div class="categories">
 
-                <a href="{% url 'bags1' %}">
+                <a href="{% url 'bags' %}">
                     Bags
                 </a>
 
@@ -87,11 +106,9 @@
             </div>
 
 
-            <a href="#">
-                Contact
-            </a>
+            <a href="{% url 'contact' %}">Contact</a>
 
-            <a href="#">
+            <a href="{% url 'policy' %}">
                 Our Policy
             </a>
 
@@ -236,7 +253,7 @@
             <!-- BAGS -->
 
             <a
-                href="{% url 'bags1' %}"
+                href="{% url 'bags' %}"
                 class="category-card"
             >
 
@@ -293,141 +310,175 @@
 
     </section>
 
+<!-- ================= BEST SELLERS ================= -->
 
-    <!-- ================= BEST SELLERS ================= -->
+<section
+    id="best-sellers"
+    class="products-section"
+>
 
-    <section
-        id="best-sellers"
-        class="products-section"
-    >
+    <div class="best-sellers-header">
 
-        <div class="best-sellers-header">
+        <h2 class="section-title">
+            Best Sellers
+        </h2>
 
-            <h2 class="section-title">
-                Best Sellers
-            </h2>
+        <a
+            href="{% url 'best_sellers' %}"
+            class="view-all-btn"
+        >
+            View All Best Sellers
+        </a>
 
-            <p>
-                Our most loved pieces
-            </p>
-
-        </div>
-
-
-        <div class="products-container">
-
-
-            {% for product in best_sellers %}
+    </div>
 
 
-                <!-- PRODUCT CARD -->
+    <div class="products-container">
 
-                <div
-                    class="product-card"
-                    data-product-id="{{ product.id }}"
+        {% for product in best_sellers %}
+
+            <!-- PRODUCT CARD -->
+
+            <div
+                class="product-card"
+                data-product-id="{{ product.id }}"
+            >
+
+                <!-- PRODUCT LINK -->
+
+                <a
+                    href="{% url 'product_detail' product.id %}"
+                    class="product-link"
                 >
 
+                    <div class="product-image-wrapper">
 
-                    <!-- PRODUCT LINK -->
-
-                    <a
-                        href="{% url 'product_detail' product.id %}"
-                        class="product-link"
-                    >
-
-                        <div class="product-image-wrapper">
+                        {% if product.is_out_of_stock %}
 
 
-                            {% if product.is_on_sale and product.sale_price %}
+                        <span class="out-of-stock-label">
 
-                                <span class="sale-label">
-                                    SALE
-                                </span>
+                            OUT OF STOCK
 
-                            {% endif %}
+                        </span>
 
 
-                            <img
-                                src="{{ product.image_url }}"
-                                alt="{{ product.name }}"
-                            >
-
-                        </div>
+                        {% elif product.is_on_sale and product.sale_price or product.has_variant_sale %}
 
 
-                        <h3>
-                            {{ product.name }}
-                        </h3>
+                        <span class="sale-label">
 
-                    </a>
+                            SALE
+
+                        </span>
 
 
-                    <!-- PRICE -->
+                        {% endif %}
 
-                    {% if product.is_on_sale and product.sale_price %}
+                        <img
 
-                        <p class="price">
+                        src="{{ product.image_url }}"
 
-                            <span class="old-price">
-                                LE {{ product.price }}
-                            </span>
+                        alt="{{ product.name }}"
 
-                            <span class="sale-price">
-                                LE {{ product.sale_price }}
-                            </span>
+                        >
 
-                        </p>
+                    </div>
 
-                    {% else %}
 
-                        <p class="price">
+                    <h3>
+                        {{ product.name }}
+                    </h3>
+
+                </a>
+
+
+                <!-- PRICE -->
+
+                {% if product.is_on_sale and product.sale_price %}
+
+                    <p class="price">
+
+                        <span class="old-price">
                             LE {{ product.price }}
-                        </p>
+                        </span>
 
-                    {% endif %}
+                        <span class="sale-price">
+                            LE {{ product.sale_price }}
+                        </span>
 
+                    </p>
 
-                    <!-- ADD TO CART -->
+                {% else %}
 
-                    {% if product.stock > 0 %}
+                    <p class="price">
+                        LE {{ product.price }}
+                    </p>
 
-                        <button
-                            class="btn-add"
-                            type="button"
-                        >
-                            Add to cart
-                        </button>
-
-                    {% else %}
-
-                        <button
-                            class="btn-add"
-                            type="button"
-                            disabled
-                        >
-                            Out of Stock
-                        </button>
-
-                    {% endif %}
+                {% endif %}
 
 
-                </div>
+                <!-- ADD TO CART -->
+
+                {% if product.is_out_of_stock %}
 
 
-            {% empty %}
+                <button
+
+                class="btn-add"
+
+                type="button"
+
+                disabled
+
+                >
+
+                Out of Stock
+
+            </button>
 
 
-                <p class="empty-products">
-                    No best sellers available yet.
-                </p>
+            {% else %}
 
 
-            {% endfor %}
+            <button
+
+            class="btn-add"
+
+            type="button"
+
+            >
+
+            Add to cart
+
+        </button>
 
 
-        </div>
+        {% endif %}
 
-    </section>
+
+    </div>
+
+
+
+    {% empty %}
+
+
+    <p class="empty-products">
+
+        No best sellers available yet.
+
+    </p>
+
+
+    {% endfor %}
+
+
+</div>
+
+
+</section>
+
 
 
     <!-- ================= FOOTER ================= -->

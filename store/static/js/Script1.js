@@ -1,8 +1,8 @@
 // ==========================================
-// 1. Get Elements
+// 1. GET ELEMENTS
 // ==========================================
 
-// Side Menu
+// ---------- Side Menu ----------
 const openBtn = document.getElementById('openBtn');
 const closeBtn = document.getElementById('closeBtn');
 const sideMenu = document.getElementById('sideMenu');
@@ -10,7 +10,7 @@ const menuOverlay = document.getElementById('menuOverlay');
 const shopAllBtn = document.querySelector('.shop-all-btn');
 const categoriesDiv = document.querySelector('.categories');
 
-// Side Cart
+// ---------- Side Cart ----------
 const cartBtn = document.getElementById('cartBtn');
 const closeCartBtn = document.getElementById('closeCartBtn');
 const sideCart = document.getElementById('sideCart');
@@ -18,34 +18,108 @@ const cartItemsContainer = document.getElementById('cartItems');
 const cartCountSpan = document.getElementById('cartCount');
 const cartTotalSpan = document.getElementById('cartTotal');
 
-// Add To Cart Buttons
+// ---------- Add To Cart ----------
 const addToCartButtons =
     document.querySelectorAll('.btn-add');
 
-// Cart
+// ---------- Cart ----------
 let cart =
     JSON.parse(localStorage.getItem('cart')) || [];
-
+const standardDeliveryPrice =
+    document.getElementById('deliveryPrice');
 
 // ==========================================
-// 2. Side Menu Events
+// 2. CART HELPERS
 // ==========================================
 
-if (openBtn && closeBtn && sideMenu && menuOverlay) {
+function getProductQuantity(productId) {
 
-    openBtn.addEventListener('click', function () {
+    const product = cart.find(function (item) {
 
-        sideMenu.classList.add('active');
-        menuOverlay.classList.add('active');
+        return String(item.id) === String(productId);
 
     });
 
+    return product ? product.quantity : 0;
+}
+
+
+function updateProductButtons() {
+
+    const buttons =
+        document.querySelectorAll('.btn-add');
+
+    buttons.forEach(function (button) {
+
+        let productId;
+
+        const productCard =
+            button.closest('.product-card');
+
+        if (productCard) {
+
+            productId =
+                productCard.dataset.productId;
+
+        } else {
+
+            productId =
+                button.dataset.productId;
+
+        }
+
+        if (!productId) {
+            return;
+        }
+
+        const quantity =
+            getProductQuantity(productId);
+
+        if (quantity > 0) {
+
+            button.textContent =
+                `${quantity} in cart`;
+
+        } else {
+
+            button.textContent =
+                'Add to cart';
+
+        }
+
+    });
+
+}
+
+// ==========================================
+// 3. SIDE MENU EVENTS
+// ==========================================
+
+if (openBtn && sideMenu && menuOverlay) {
+
+    openBtn.addEventListener('click', function () {
+        sideMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+    });
+
+}
+
+
+if (closeBtn && sideMenu && menuOverlay) {
 
     closeBtn.addEventListener('click', function () {
-
         sideMenu.classList.remove('active');
         menuOverlay.classList.remove('active');
+    });
 
+}
+
+
+if (menuOverlay && sideMenu) {
+
+    menuOverlay.addEventListener('click', function () {
+        sideMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
     });
 
 }
@@ -54,17 +128,15 @@ if (openBtn && closeBtn && sideMenu && menuOverlay) {
 if (shopAllBtn && categoriesDiv) {
 
     shopAllBtn.addEventListener('click', function () {
-
         categoriesDiv.classList.toggle('show');
         shopAllBtn.classList.toggle('open');
-
     });
 
 }
 
 
 // ==========================================
-// 3. Side Cart Events
+// 4. SIDE CART EVENTS
 // ==========================================
 
 if (cartBtn && sideCart && menuOverlay) {
@@ -98,11 +170,15 @@ if (menuOverlay) {
     menuOverlay.addEventListener('click', function () {
 
         if (sideMenu) {
+
             sideMenu.classList.remove('active');
+
         }
 
         if (sideCart) {
+
             sideCart.classList.remove('active');
+
         }
 
         menuOverlay.classList.remove('active');
@@ -111,9 +187,8 @@ if (menuOverlay) {
 
 }
 
-
-// ==========================================
-// 4. Add Products To Cart
+ // ==========================================
+// 5. ADD PRODUCTS TO CART
 // ==========================================
 
 addToCartButtons.forEach(function (button) {
@@ -125,54 +200,367 @@ addToCartButtons.forEach(function (button) {
         const productCard =
             button.closest('.product-card');
 
-        if (!productCard) {
-            return;
+        let productId;
+        let title;
+        let price;
+        let imgSrc;
+
+        let variantId = null;
+        let variantColor = '';
+
+
+        // ------------------------------------------
+        // PRODUCT CARD
+        // ------------------------------------------
+
+        if (productCard) {
+
+            productId =
+                productCard.dataset.productId;
+
+            const titleElement =
+                productCard.querySelector('h3');
+
+            title =
+                titleElement
+                    ? titleElement.innerText.trim()
+                    : '';
+
+
+            const salePriceElement =
+                productCard.querySelector('.sale-price');
+
+            const priceElement =
+                productCard.querySelector('.price');
+
+            const priceText =
+                salePriceElement
+                    ? salePriceElement.innerText
+                    : priceElement
+                        ? priceElement.innerText
+                        : '';
+
+            price =
+                parseFloat(
+                    priceText.replace(/[^0-9.]/g, '')
+                );
+
+
+            const imageElement =
+                productCard.querySelector('img');
+
+            imgSrc =
+                imageElement
+                    ? imageElement.src
+                    : '';
+
         }
 
 
-        const productId =
-            productCard.dataset.productId;
+        // ------------------------------------------
+        // PRODUCT DETAIL PAGE
+        // ------------------------------------------
 
-        const title =
-            productCard.querySelector('h3').innerText;
+        else {
 
-
-        // Get sale price if product is on sale
-        const salePriceElement =
-            productCard.querySelector('.sale-price');
-
-        const priceElement =
-            productCard.querySelector('.price');
+            productId =
+                button.dataset.productId;
 
 
-        const priceText =
-            salePriceElement
-                ? salePriceElement.innerText
-                : priceElement.innerText;
+            const productPage =
+                document.querySelector(
+                    '.product-detail-page'
+                );
 
 
-        // Convert "LE 3500" to 3500
-        const price =
-            parseFloat(
-                priceText.replace(/[^0-9.]/g, '')
-            );
+            if (!productPage) {
+                return;
+            }
 
 
-        const imageElement =
-            productCard.querySelector('img');
+            const titleElement =
+                productPage.querySelector('h1');
 
-        const imgSrc =
-            imageElement ? imageElement.src : '';
+            title =
+                titleElement
+                    ? titleElement.innerText.trim()
+                    : '';
 
 
-        // Check if product already exists
+            // ------------------------------------------
+            // DEFAULT PRODUCT PRICE
+            // ------------------------------------------
+
+            const salePriceElement =
+                productPage.querySelector(
+                    '.product-detail-price .sale-price'
+                );
+
+            const regularPriceElement =
+                productPage.querySelector(
+                    '.product-detail-price .regular-price'
+                );
+
+            const priceElement =
+                productPage.querySelector(
+                    '.product-detail-price'
+                );
+
+
+            const priceText =
+                salePriceElement
+                    ? salePriceElement.innerText
+                    : regularPriceElement
+                        ? regularPriceElement.innerText
+                        : priceElement
+                            ? priceElement.innerText
+                            : '';
+
+
+            price =
+                parseFloat(
+                    priceText.replace(/[^0-9.]/g, '')
+                );
+
+
+            // ------------------------------------------
+            // GET VARIANTS
+            // ------------------------------------------
+
+            const variantsDataElement =
+                document.getElementById(
+                    'variants-data'
+                );
+
+
+            let variantsData = [];
+
+
+            if (variantsDataElement) {
+
+                try {
+
+                    variantsData =
+                        JSON.parse(
+                            variantsDataElement.textContent
+                        );
+
+                } catch (error) {
+
+                    console.error(
+                        'Error parsing variants data:',
+                        error
+                    );
+
+                }
+
+            }
+
+
+            // ------------------------------------------
+            // SELECTED COLOR
+            // ------------------------------------------
+
+            const colorSelect =
+                document.getElementById(
+                    'colorSelect'
+                );
+
+
+            const selectedColor =
+                colorSelect
+                    ? colorSelect.value
+                    : '';
+
+
+            // ------------------------------------------
+            // FIND SELECTED VARIANT
+            // ------------------------------------------
+
+            let selectedVariant = null;
+
+
+            if (
+                selectedColor &&
+                variantsData.length > 0
+            ) {
+
+                selectedVariant =
+                    variantsData.find(
+                        function (variant) {
+
+                            return (
+                                variant.color ===
+                                selectedColor
+                            );
+
+                        }
+                    );
+
+            }
+
+
+            // ------------------------------------------
+            // REQUIRE COLOR IF VARIANTS EXIST
+            // ------------------------------------------
+
+            if (
+                variantsData.length > 0 &&
+                !selectedVariant
+            ) {
+
+                alert(
+                    'Please choose a color first.'
+                );
+
+                return;
+
+            }
+
+
+            // ------------------------------------------
+            // VARIANT DATA
+            // ------------------------------------------
+
+            if (selectedVariant) {
+
+                variantId =
+                    selectedVariant.id;
+
+                variantColor =
+                    selectedVariant.color;
+
+
+                    // Variant price
+
+
+                    if (
+
+                        selectedVariant.is_on_sale &&
+
+                        selectedVariant.sale_price !== null &&
+
+                        selectedVariant.sale_price !== ''
+
+                    ) {
+
+
+                        price =
+
+                        Number(
+
+                            selectedVariant.sale_price
+
+                        );
+
+
+                    } else if (
+
+                        selectedVariant.price !== null &&
+
+                        selectedVariant.price !== ''
+
+                    ) {
+
+
+                        price =
+
+                        Number(
+
+                            selectedVariant.price
+
+                        );
+
+
+                    }
+
+
+                // Variant image
+                if (
+                    selectedVariant.image_url
+                ) {
+
+                    imgSrc =
+                        selectedVariant.image_url;
+
+                }
+
+
+                // Variant stock
+                if (
+                    Number(selectedVariant.stock) <= 0
+                ) {
+
+                    alert(
+                        'This color is out of stock.'
+                    );
+
+                    return;
+
+                }
+
+            }
+
+
+            // ------------------------------------------
+            // DEFAULT PRODUCT IMAGE
+            // ------------------------------------------
+
+            if (!imgSrc) {
+
+                const imageElement =
+                    productPage.querySelector(
+                        '.product-detail-image img'
+                    );
+
+
+                imgSrc =
+                    imageElement
+                        ? imageElement.src
+                        : '';
+
+            }
+
+        }
+
+
+        // ------------------------------------------
+        // CHECK PRODUCT DATA
+        // ------------------------------------------
+
+        if (
+            !productId ||
+            !title ||
+            isNaN(price)
+        ) {
+
+            return;
+
+        }
+
+
+        // ------------------------------------------
+        // CHECK EXISTING PRODUCT
+        // SAME PRODUCT + SAME COLOR
+        // ------------------------------------------
+
         const existingProduct =
             cart.find(function (item) {
 
-                return item.id == productId;
+                return (
+                    String(item.id) ===
+                    String(productId) &&
+
+                    String(item.variantId || '') ===
+                    String(variantId || '')
+                );
 
             });
 
+
+        // ------------------------------------------
+        // UPDATE QUANTITY
+        // ------------------------------------------
 
         if (existingProduct) {
 
@@ -183,6 +571,10 @@ addToCartButtons.forEach(function (button) {
             cart.push({
 
                 id: productId,
+
+                variantId: variantId,
+
+                color: variantColor,
 
                 title: title,
 
@@ -197,15 +589,22 @@ addToCartButtons.forEach(function (button) {
         }
 
 
-        // Save cart
+        // ------------------------------------------
+        // SAVE CART
+        // ------------------------------------------
+
         localStorage.setItem(
             'cart',
             JSON.stringify(cart)
         );
 
 
-        // Update cart
+        // ------------------------------------------
+        // UPDATE CART
+        // ------------------------------------------
+
         updateCartUI();
+        updateProductButtons();
 
     });
 
@@ -213,7 +612,7 @@ addToCartButtons.forEach(function (button) {
 
 
 // ==========================================
-// 5. Update Cart UI
+// 6. UPDATE CART UI
 // ==========================================
 
 function updateCartUI() {
@@ -223,29 +622,45 @@ function updateCartUI() {
         !cartCountSpan ||
         !cartTotalSpan
     ) {
+
         return;
+
     }
 
 
-    // Number of different products
-    cartCountSpan.innerText = cart.length;
+    let totalQuantity = 0;
 
 
-    // Change cart count color
-    if (cart.length === 0) {
+    cart.forEach(function (item) {
 
-        cartCountSpan.style.backgroundColor =
-            '#e63946';
+        totalQuantity += item.quantity;
+
+    });
+
+
+    // ---------- Cart Count ----------
+
+    if (totalQuantity > 0) {
+
+        cartCountSpan.innerText =
+            totalQuantity;
+
+        cartCountSpan.style.display =
+            'flex';
 
     } else {
 
-        cartCountSpan.style.backgroundColor =
-            '#2ec4b6';
+        cartCountSpan.innerText =
+            '';
+
+        cartCountSpan.style.display =
+            'none';
 
     }
 
 
-    // Empty cart
+    // ---------- Empty Cart ----------
+
     if (cart.length === 0) {
 
         cartItemsContainer.innerHTML =
@@ -264,7 +679,8 @@ function updateCartUI() {
     let total = 0;
 
 
-    // Display products
+    // ---------- Display Products ----------
+
     cart.forEach(function (item, index) {
 
         total +=
@@ -282,18 +698,49 @@ function updateCartUI() {
 
                 <div class="cart-item-info">
 
-                    <h4>
-                        ${item.title}
-                    </h4>
 
-                    <p>
-                        LE ${item.price.toLocaleString(
-                            'en-US',
-                            {
-                                minimumFractionDigits: 2
-                            }
-                        )}
+                <h4>
+
+                ${item.title}
+
+                </h4>
+
+
+                ${
+
+                    item.color
+
+                    ? `
+
+                    <p class="cart-item-color">
+
+                    Color: ${item.color}
+
                     </p>
+
+                    `
+
+                    : ''
+
+                }
+
+
+                <p>
+
+                LE ${item.price.toLocaleString(
+
+                    'en-US',
+
+                    {
+
+                        minimumFractionDigits: 2
+
+                    }
+
+                )}
+
+                </p>
+
 
                 </div>
 
@@ -332,7 +779,8 @@ function updateCartUI() {
     });
 
 
-    // Cart total
+    // ---------- Cart Total ----------
+
     cartTotalSpan.innerText =
         `LE ${total.toLocaleString(
             'en-US',
@@ -344,12 +792,32 @@ function updateCartUI() {
 }
 
 
-// Update cart when page loads
+// ==========================================
+// 7. CART LOAD / REFRESH
+// ==========================================
+
 updateCartUI();
+updateProductButtons();
+
+
+window.addEventListener(
+    'pageshow',
+    function () {
+
+        cart =
+            JSON.parse(
+                localStorage.getItem('cart')
+            ) || [];
+
+        updateCartUI();
+        updateProductButtons();
+
+    }
+);
 
 
 // ==========================================
-// 6. Cart Quantity Functions
+// 8. CART QUANTITY FUNCTIONS
 // ==========================================
 
 window.removeItem = function (index) {
@@ -364,10 +832,9 @@ window.removeItem = function (index) {
 
 
     updateCartUI();
+    updateProductButtons();
 
 };
-
-
 window.increaseQuantity = function (index) {
 
     if (!cart[index]) {
@@ -375,7 +842,123 @@ window.increaseQuantity = function (index) {
     }
 
 
-    cart[index].quantity += 1;
+    const item = cart[index];
+
+    let maxStock = null;
+
+
+    // ==========================================
+    // VARIANT STOCK
+    // ==========================================
+
+    if (item.variantId) {
+
+        const variantsElement =
+            document.getElementById('variants-data');
+
+
+        if (variantsElement) {
+
+            try {
+
+                const variants =
+                    JSON.parse(
+                        variantsElement.textContent
+                    );
+
+
+                const variant =
+                    variants.find(
+                        function (variant) {
+
+                            return String(variant.id) ===
+                                String(item.variantId);
+
+                        }
+                    );
+
+
+                if (!variant) {
+
+                    alert(
+                        'This color is no longer available.'
+                    );
+
+                    return;
+
+                }
+
+
+                maxStock =
+                    Number(variant.stock);
+
+
+            } catch (error) {
+
+                console.error(
+                    'Error parsing variant data:',
+                    error
+                );
+
+                return;
+
+            }
+
+        }
+
+    }
+
+
+    // ==========================================
+    // PRODUCT STOCK
+    // ==========================================
+
+    else {
+
+        const product =
+            allProducts.find(
+                function (product) {
+
+                    return String(product.id) ===
+                        String(item.id);
+
+                }
+            );
+
+
+        if (product) {
+
+            maxStock =
+                Number(product.stock);
+
+        }
+
+    }
+
+
+    // ==========================================
+    // CHECK STOCK
+    // ==========================================
+
+    if (
+        maxStock !== null &&
+        item.quantity >= maxStock
+    ) {
+
+        alert(
+            'You cannot add more than the available stock.'
+        );
+
+        return;
+
+    }
+
+
+    // ==========================================
+    // INCREASE
+    // ==========================================
+
+    item.quantity += 1;
 
 
     localStorage.setItem(
@@ -385,6 +968,7 @@ window.increaseQuantity = function (index) {
 
 
     updateCartUI();
+    updateProductButtons();
 
 };
 
@@ -414,12 +998,11 @@ window.decreaseQuantity = function (index) {
 
 
     updateCartUI();
+    updateProductButtons();
 
 };
-
-
 // ==========================================
-// 7. Search System
+// 9. SEARCH SYSTEM
 // ==========================================
 
 const searchBtn =
@@ -437,22 +1020,26 @@ const searchResults =
 
 if (searchBtn && searchBox) {
 
-    searchBtn.addEventListener('click', function (e) {
+    searchBtn.addEventListener(
+        'click',
+        function (e) {
 
-        e.preventDefault();
+            e.preventDefault();
 
-        searchBox.classList.toggle('active');
+            searchBox.classList.toggle('active');
 
 
-        if (
-            searchBox.classList.contains('active')
-        ) {
+            if (
+                searchBox.classList.contains('active') &&
+                searchInput
+            ) {
 
-            searchInput.focus();
+                searchInput.focus();
+
+            }
 
         }
-
-    });
+    );
 
 }
 
@@ -542,7 +1129,6 @@ if (searchInput && searchResults) {
                     result.href =
                         `/product/${product.id}/`;
 
-
                     result.className =
                         'search-item-link';
 
@@ -589,7 +1175,7 @@ if (searchInput && searchResults) {
 
 
 // ==========================================
-// 8. Checkout Button
+// 10. CHECKOUT BUTTON
 // ==========================================
 
 const checkoutBtn =
@@ -626,36 +1212,84 @@ if (checkoutBtn) {
 
 
 // ==========================================
-// 9. Checkout Page
+// 11. CHECKOUT ELEMENTS
 // ==========================================
 
 const checkoutItems =
     document.getElementById('checkoutItems');
 
+const checkoutSubtotal =
+    document.getElementById('checkoutSubtotal');
+
+const checkoutShipping =
+    document.getElementById('checkoutShipping');
+
+const checkoutDiscount =
+    document.getElementById('checkoutDiscount');
+
 const checkoutTotal =
     document.getElementById('checkoutTotal');
 
+const governorateSelect =
+    document.getElementById('governorate');
+
+const cityInput =
+    document.getElementById('city');
+
+
+// ==========================================
+// 12. CHECKOUT VARIABLES
+// ==========================================
 
 let checkoutOriginalTotal = 0;
 
+let shippingCost = 0;
 
-if (checkoutItems && checkoutTotal) {
+let discountAmount = 0;
+
+
+// ==========================================
+// 13. DISPLAY CHECKOUT PRODUCTS
+// ==========================================
+
+if (checkoutItems) {
 
     checkoutItems.innerHTML = '';
 
     checkoutOriginalTotal = 0;
 
 
-    // Empty cart on checkout
     if (cart.length === 0) {
 
         checkoutItems.innerHTML =
             '<p class="empty-msg">Your cart is empty.</p>';
 
-        checkoutTotal.innerText =
-            'LE 0.00';
+
+        if (checkoutSubtotal) {
+
+            checkoutSubtotal.innerText =
+                'LE 0.00';
+
+        }
+
+
+        if (checkoutShipping) {
+
+            checkoutShipping.innerText =
+                'LE 0.00';
+
+        }
+
+
+        if (checkoutTotal) {
+
+            checkoutTotal.innerText =
+                'LE 0.00';
+
+        }
 
     } else {
+
 
         cart.forEach(function (item) {
 
@@ -708,7 +1342,27 @@ if (checkoutItems && checkoutTotal) {
         });
 
 
-        checkoutTotal.innerText =
+        updateCheckoutTotal();
+
+    }
+
+}
+
+
+// ==========================================
+// 14. UPDATE CHECKOUT TOTAL
+// ==========================================
+function updateCheckoutTotal() {
+
+    const finalTotal =
+        checkoutOriginalTotal +
+        shippingCost -
+        discountAmount;
+
+
+    if (checkoutSubtotal) {
+
+        checkoutSubtotal.innerText =
             `LE ${checkoutOriginalTotal.toLocaleString(
                 'en-US',
                 {
@@ -718,11 +1372,234 @@ if (checkoutItems && checkoutTotal) {
 
     }
 
+
+    // Update Standard Delivery price
+    if (standardDeliveryPrice) {
+
+        standardDeliveryPrice.innerText =
+            `LE ${shippingCost.toLocaleString(
+                'en-US',
+                {
+                    minimumFractionDigits: 2
+                }
+            )}`;
+
+    }
+
+
+    // Update Order Summary shipping
+    if (checkoutShipping) {
+
+        checkoutShipping.innerText =
+            `LE ${shippingCost.toLocaleString(
+                'en-US',
+                {
+                    minimumFractionDigits: 2
+                }
+            )}`;
+
+    }
+
+
+    if (checkoutDiscount) {
+
+        checkoutDiscount.innerText =
+            `— LE ${discountAmount.toLocaleString(
+                'en-US',
+                {
+                    minimumFractionDigits: 2
+                }
+            )}`;
+
+    }
+
+
+    if (checkoutTotal) {
+
+        checkoutTotal.innerText =
+            `LE ${Math.max(
+                finalTotal,
+                0
+            ).toLocaleString(
+                'en-US',
+                {
+                    minimumFractionDigits: 2
+                }
+            )}`;
+
+    }
+
+}
+// ==========================================
+// 15. GET DELIVERY PRICE
+// ==========================================
+
+function getDeliveryPrice(governorate) {
+
+    if (!governorate) {
+
+        shippingCost = 0;
+
+        updateCheckoutTotal();
+
+        return;
+
+    }
+
+    fetch(
+        `/delivery-price/?governorate=${encodeURIComponent(
+            governorate
+        )}`
+    )
+
+        .then(function (response) {
+
+            if (!response.ok) {
+
+                throw new Error(
+                    'Delivery price request failed.'
+                );
+
+            }
+
+            return response.json();
+
+        })
+
+        .then(function (data) {
+
+            if (data.success) {
+
+                shippingCost =
+                    Number(data.delivery_price) || 0;
+
+            } else {
+
+                shippingCost = 0;
+
+            }
+
+            updateCheckoutTotal();
+
+        })
+
+        .catch(function (error) {
+
+            console.error(
+                'Delivery price error:',
+                error
+            );
+
+            shippingCost = 0;
+
+            updateCheckoutTotal();
+
+        });
+
+}
+
+// ==========================================
+// 16. GOVERNORATE
+// ==========================================
+
+const egyptGovernorates = [
+    "Cairo",
+    "Giza",
+    "Alexandria",
+    "Dakahlia",
+    "Sharqia",
+    "Gharbia",
+    "Monufia",
+    "Qalyubia",
+    "Beheira",
+    "Kafr El Sheikh",
+    "Damietta",
+    "Port Said",
+    "Ismailia",
+    "Suez",
+    "Fayoum",
+    "Beni Suef",
+    "Minya",
+    "Assiut",
+    "Sohag",
+    "Qena",
+    "Luxor",
+    "Aswan",
+    "Red Sea",
+    "New Valley",
+    "Matrouh",
+    "North Sinai",
+    "South Sinai"
+];
+
+
+// Add governorates to dropdown
+
+if (governorateSelect) {
+
+    egyptGovernorates.forEach(function (governorate) {
+
+        const option =
+            document.createElement('option');
+
+        option.value =
+            governorate;
+
+        option.textContent =
+            governorate;
+
+        governorateSelect.appendChild(option);
+
+    });
+
+}
+
+
+// Governorate change
+
+if (governorateSelect) {
+
+    governorateSelect.addEventListener(
+        'change',
+        function () {
+
+            const selectedGovernorate =
+                governorateSelect.value;
+
+            getDeliveryPrice(
+                selectedGovernorate
+            );
+
+        }
+    );
+
 }
 
 
 // ==========================================
-// 10. Promo Code
+// 17. STANDARD DELIVERY
+// ==========================================
+
+// Shipping method is Standard Delivery only.
+// The actual price comes from Django Admin
+// according to the selected governorate.
+
+const shippingMethodInput =
+    document.querySelector(
+        'input[name="shipping_method"]'
+    );
+
+
+if (shippingMethodInput) {
+
+    shippingMethodInput.value =
+        'Standard Delivery';
+
+}
+
+
+// ==========================================
+// 18. PROMO CODE
 // ==========================================
 
 const applyPromoBtn =
@@ -804,75 +1681,63 @@ if (
                 }
             )
 
-            .then(function (response) {
+                .then(function (response) {
 
-                return response.json();
+                    return response.json();
 
-            })
+                })
 
-            .then(function (data) {
+                .then(function (data) {
 
-                if (!data.success) {
+                    if (!data.success) {
+
+                        discountAmount = 0;
+
+                        promoMessage.innerText =
+                            data.message;
+
+                        updateCheckoutTotal();
+
+                        return;
+
+                    }
+
+
+                    // IMPORTANT:
+                    // Update the global variable.
+                    // Do NOT use "const" here.
+
+                    discountAmount =
+                        checkoutOriginalTotal *
+                        Number(data.discount_percent) /
+                        100;
+
+
+                    updateCheckoutTotal();
+
 
                     promoMessage.innerText =
-                        data.message;
-
-
-                    checkoutTotal.innerText =
-                        `LE ${checkoutOriginalTotal.toLocaleString(
+                        `${data.message} You saved LE ${discountAmount.toLocaleString(
                             'en-US',
                             {
                                 minimumFractionDigits: 2
                             }
-                        )}`;
+                        )}.`;
 
-                    return;
+                })
 
-                }
+                .catch(function (error) {
 
-
-                const discountAmount =
-                    checkoutOriginalTotal *
-                    data.discount_percent /
-                    100;
-
-
-                const finalTotal =
-                    checkoutOriginalTotal -
-                    discountAmount;
+                    console.error(
+                        'Promo error:',
+                        error
+                    );
 
 
-                checkoutTotal.innerText =
-                    `LE ${finalTotal.toLocaleString(
-                        'en-US',
-                        {
-                            minimumFractionDigits: 2
-                        }
-                    )}`;
+                    promoMessage.innerText =
+                        'Something went wrong. Please try again.';
 
-
-                promoMessage.innerText =
-                    `${data.message} You saved LE ${discountAmount.toLocaleString(
-                        'en-US',
-                        {
-                            minimumFractionDigits: 2
-                        }
-                    )}.`;
-
-            })
-
-            .catch(function (error) {
-
-                console.error(
-                    'Promo error:',
-                    error
-                );
-
-
-                promoMessage.innerText =
-                    'Something went wrong. Please try again.';
-
-            });
+                });
 
         }
     );
@@ -881,7 +1746,7 @@ if (
 
 
 // ==========================================
-// 11. Submit Checkout Form
+// 19. SUBMIT CHECKOUT FORM
 // ==========================================
 
 const checkoutForm =
@@ -899,7 +1764,8 @@ if (checkoutForm) {
         function () {
 
             const currentCart =
-                localStorage.getItem('cart') || '[]';
+                localStorage.getItem('cart') ||
+                '[]';
 
 
             if (cartDataInput) {
@@ -913,3 +1779,354 @@ if (checkoutForm) {
     );
 
 }
+// ==========================================
+// 21. PRODUCT VARIANT
+// COLOR → IMAGE + PRICE + SALE + STOCK
+// ==========================================
+
+const variantsDataElement =
+    document.getElementById('variants-data');
+
+const colorSelect =
+    document.getElementById('colorSelect');
+
+const productDetailImage =
+    document.querySelector(
+        '.product-detail-image img'
+    );
+
+const productPrice =
+    document.getElementById('productPrice');
+
+const productStock =
+    document.getElementById('productStock');
+
+const productDetailAdd =
+    document.getElementById('productDetailAdd');
+
+
+let variantsData = [];
+
+
+// ==========================================
+// ORIGINAL PRODUCT DATA
+// ==========================================
+
+const originalProductImage =
+    productDetailImage
+        ? productDetailImage.src
+        : '';
+
+const originalProductPriceHTML =
+    productPrice
+        ? productPrice.innerHTML
+        : '';
+
+
+// ==========================================
+// GET VARIANTS
+// ==========================================
+
+if (variantsDataElement) {
+
+    try {
+
+        variantsData =
+            JSON.parse(
+                variantsDataElement.textContent
+            );
+
+    } catch (error) {
+
+        console.error(
+            'Error parsing variants data:',
+            error
+        );
+
+    }
+
+}
+
+
+// ==========================================
+// COLOR CHANGE
+// ==========================================
+
+if (colorSelect) {
+
+    colorSelect.addEventListener(
+        'change',
+        function () {
+
+            const selectedColor =
+                colorSelect.value;
+
+
+            // ======================================
+            // RESET
+            // ======================================
+
+            if (!selectedColor) {
+
+                if (productDetailImage) {
+
+                    productDetailImage.src =
+                        originalProductImage;
+
+                }
+
+
+                if (productPrice) {
+
+                    productPrice.innerHTML =
+                        originalProductPriceHTML;
+
+                }
+
+
+                // Check if ANY variant is available
+                const hasAvailableVariant =
+                    variantsData.some(
+                        function (variant) {
+
+                            return (
+                                Number(
+                                    variant.stock
+                                ) > 0
+                            );
+
+                        }
+                    );
+
+
+                if (productStock) {
+
+                    if (hasAvailableVariant) {
+
+                        productStock.innerText =
+                            'Choose a color';
+
+                        productStock.classList.remove(
+                            'out'
+                        );
+
+                    } else {
+
+                        productStock.innerText =
+                            'OUT OF STOCK';
+
+                        productStock.classList.add(
+                            'out'
+                        );
+
+                    }
+
+                }
+
+
+                if (productDetailAdd) {
+
+                    productDetailAdd.disabled =
+                        true;
+
+                    if (hasAvailableVariant) {
+
+                        productDetailAdd.innerText =
+                            'Choose a Color';
+
+                    } else {
+
+                        productDetailAdd.innerText =
+                            'Out of Stock';
+
+                    }
+
+                }
+
+                return;
+
+            }
+
+
+            // ======================================
+            // FIND VARIANT
+            // ======================================
+
+            const selectedVariant =
+                variantsData.find(
+                    function (variant) {
+
+                        return (
+                            variant.color ===
+                            selectedColor
+                        );
+
+                    }
+                );
+
+
+            if (!selectedVariant) {
+
+                return;
+
+            }
+
+
+            // ======================================
+            // CHANGE IMAGE
+            // ======================================
+
+            if (
+                selectedVariant.image_url &&
+                productDetailImage
+            ) {
+
+                productDetailImage.src =
+                    selectedVariant.image_url;
+
+            }
+
+
+            // ======================================
+            // CHANGE PRICE
+            // ======================================
+
+            if (
+                productPrice &&
+                selectedVariant.price !== null &&
+                selectedVariant.price !== ''
+            ) {
+
+                const regularPrice =
+                    Number(
+                        selectedVariant.price
+                    );
+
+
+                const salePrice =
+                    selectedVariant.sale_price !== null &&
+                    selectedVariant.sale_price !== ''
+                        ? Number(
+                            selectedVariant.sale_price
+                        )
+                        : null;
+
+
+                if (
+                    selectedVariant.is_on_sale &&
+                    salePrice !== null
+                ) {
+
+                    productPrice.innerHTML = `
+                        <span class="old-price">
+                            LE ${regularPrice.toLocaleString(
+                                'en-US',
+                                {
+                                    minimumFractionDigits: 2
+                                }
+                            )}
+                        </span>
+
+                        <span class="sale-price">
+                            LE ${salePrice.toLocaleString(
+                                'en-US',
+                                {
+                                    minimumFractionDigits: 2
+                                }
+                            )}
+                        </span>
+                    `;
+
+                } else {
+
+                    productPrice.innerHTML = `
+                        <span class="regular-price">
+                            LE ${regularPrice.toLocaleString(
+                                'en-US',
+                                {
+                                    minimumFractionDigits: 2
+                                }
+                            )}
+                        </span>
+                    `;
+
+                }
+
+            }
+
+
+            // ======================================
+            // CHECK VARIANT STOCK
+            // ======================================
+
+            const variantStock =
+                Number(
+                    selectedVariant.stock
+                );
+
+
+            if (variantStock <= 0) {
+
+                // OUT OF STOCK
+
+                if (productStock) {
+
+                    productStock.innerText =
+                        'OUT OF STOCK';
+
+                    productStock.classList.add(
+                        'out'
+                    );
+
+                }
+
+
+                if (productDetailAdd) {
+
+                    productDetailAdd.disabled =
+                        true;
+
+                    productDetailAdd.innerText =
+                        'Out of Stock';
+
+                }
+
+            } else {
+
+                // IN STOCK
+
+                if (productStock) {
+
+                    productStock.innerText =
+                        'In stock';
+
+                    productStock.classList.remove(
+                        'out'
+                    );
+
+                }
+
+
+                if (productDetailAdd) {
+
+                    productDetailAdd.disabled =
+                        false;
+
+                    productDetailAdd.innerText =
+                        'Add to cart';
+
+                }
+
+            }
+
+        }
+    );
+
+}
+// ==========================================
+// 20. FINAL INITIALIZATION
+// ==========================================
+
+updateCartUI();
+updateProductButtons();
+updateCheckoutTotal();

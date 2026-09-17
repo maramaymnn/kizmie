@@ -22,31 +22,11 @@ urlpatterns = [
         views.apply_promo,
         name='apply_promo'
     ),
-
     path(
-        'bags1/',
-        views.bags1,
-        name='bags1'
+    'bags/',
+    views.bags,
+    name='bags'
     ),
-
-    path(
-        'bags2/',
-        views.bags2,
-        name='bags2'
-    ),
-
-    path(
-        'bags3/',
-        views.bags3,
-        name='bags3'
-    ),
-
-    path(
-        'bags4/',
-        views.bags4,
-        name='bags4'
-    ),
-
     path(
         'orders/history/',
         views.order_history,
@@ -76,5 +56,29 @@ urlpatterns = [
     views.admin_logout,
     name='admin_logout'
 ),
+path('best-sellers/', views.best_sellers, name='best_sellers'),
+path(
+    "delivery-price/",
+    views.delivery_price,
+    name="delivery_price"
+),
+path('contact/', views.contact, name='contact'),
+path('policy/', views.policy, name='policy'),
+path(
+    'register/',
+    views.register,
+    name='register'
+),
 
+path(
+    'login/',
+    views.user_login,
+    name='login'
+),
+
+path(
+    'logout/',
+    views.user_logout,
+    name='logout'
+),
 ]

@@ -3,22 +3,24 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Bags Collection - Page 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belts Collection</title>
     <link rel="stylesheet" href="{% static 'css/OnlineStorePage1.css' %}">
 </head>
 <body>
     <nav>
-        <button class="menu-btn" id="openBtn">☰ </button>
+        <button class="menu-btn" id="openBtn"></button>
         <h2 class="logo">
             <a href="{% url 'home' %}">Kimzie</a>
         </h2>
         <div class="menu-overlay" id="menuOverlay"></div>
         <div class="nav-icons">
-            <button class="nav-icon" id="searchBtn">⌕</button>
-            <a href="#" class="nav-icon" id="cartBtn">🛒<span id="cartCount">0</span></a>
-        </div>
+             <button class="nav-icon search-icon" id="searchBtn"><span></span></button>
+             <a href="#" class="nav-icon cart-icon" id="cartBtn"><span class="cart-symbol">🛒</span>
+    <span id="cartCount"></span></a>
+</div>
     </nav>
-
+    
     <!-- صندوق البحث -->
     <div class="search-box" id="searchBox">
         <input type="text" id="searchInput" placeholder="Search for a product..."/>
@@ -33,12 +35,12 @@
                 Shop All
             </button>
            <div class="categories">
-    <a href="{% url 'bags1' %}">Bags</a> 
+    <a href="{% url 'bags' %}">Bags</a> 
     <a href="{% url 'wallets' %}">Wallets</a>
     <a href="{% url 'belts' %}">Belts</a>
 </div>
-            <a href="#">Contact</a>
-            <a href="#">Our Policy</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'policy' %}">Our Policy</a>
             {% if user.is_authenticated and user.is_staff %}
 
     <a href="/admin/">
@@ -77,10 +79,10 @@
     </div>
 
     <main class="collection-page">
-       <h2 class="collection-title">Bags Collection</h2>
+        <h2 class="collection-title">Belts Collection</h2>
         <div class="products-grid-two">
 
-    {% for product in category_products %}
+    {% for product in products %}
 
     <div class="product-card" data-product-id="{{ product.id }}">
 
@@ -124,37 +126,8 @@
         {% endif %}
 </div>
 {% empty %}
- <p>No products available in this category yet.</p>
+ <p>No products available in this category yet.</p> 
  {% endfor %}</div>
- 
-
-       <div class="pagination">
-
-    <a href="{% url 'bags2' %}" class="page-arrow">
-        ←
-    </a>
-
-    <a href="{% url 'bags1' %}" class="page-link">
-        1
-    </a>
-
-    <a href="{% url 'bags2' %}" class="page-link">
-        2
-    </a>
-
-    <a href="{% url 'bags3' %}" class="page-link active">
-        3
-    </a>
-
-    <a href="{% url 'bags4' %}" class="page-link">
-        4
-    </a>
-
-    <a href="{% url 'bags4' %}" class="page-arrow">
-        →
-    </a>
-
-</div>
     </main>
 
     <footer class="main-footer">
@@ -185,8 +158,8 @@
         </div>
     </footer>
 
-    <!-- ربط المنتجات بالبحث -->
-   {{ products|json_script:"products-data" }}
+    <!-- ربط الداتابيز بالـ JavaScript للبحث الفوري -->
+    {{ products|json_script:"products-data" }}
    <script src="{% static 'js/Script1.js' %}"></script>
 </body>
 </html>

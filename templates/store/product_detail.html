@@ -25,13 +25,10 @@
     <div class="menu-overlay" id="menuOverlay"></div>
 
     <div class="nav-icons">
-        <button class="nav-icon" id="searchBtn">⌕</button>
-
-        <a href="#" class="nav-icon" id="cartBtn">
-            🛒
-            <span id="cartCount">0</span>
-        </a>
-    </div>
+             <button class="nav-icon search-icon" id="searchBtn"><span></span></button>
+             <a href="#" class="nav-icon cart-icon" id="cartBtn"><span class="cart-symbol">🛒</span>
+    <span id="cartCount"></span></a>
+</div>
 
 </nav>
 
@@ -50,39 +47,65 @@
 </div>
 
 
-<!-- SIDE MENU -->
-<div class="side-menu" id="sideMenu">
+ <!-- ================= SIDE MENU ================= -->
 
-    <button class="close-btn" id="closeBtn">×</button>
+    <div class="side-menu" id="sideMenu">
 
-    <div class="menu-content">
-
-        <button class="shop-all-btn">
-            Shop All
+        <button class="close-btn" id="closeBtn">
+            ×
         </button>
 
-        <div class="categories">
+        <div class="menu-content">
 
-            <a href="{% url 'bags1' %}">
-                Bags
+            <button class="shop-all-btn">
+                Shop All
+            </button>
+
+            <div class="categories">
+
+                <a href="{% url 'bags' %}">
+                    Bags
+                </a>
+
+                <a href="{% url 'wallets' %}">
+                    Wallets
+                </a>
+
+                <a href="{% url 'belts' %}">
+                    Belts
+                </a>
+
+            </div>
+
+
+            <a href="{% url 'contact' %}">Contact</a>
+
+            <a href="{% url 'policy' %}">
+                Our Policy
             </a>
 
-            <a href="{% url 'wallets' %}">
-                Wallets
-            </a>
 
-            <a href="{% url 'belts' %}">
-                Belts
-            </a>
+            {% if user.is_authenticated and user.is_staff %}
+
+                <a href="/admin/">
+                    Admin Dashboard
+                </a>
+
+                <a href="{% url 'admin_logout' %}">
+                    Logout
+                </a>
+
+            {% else %}
+
+                <a href="{% url 'admin_login' %}">
+                    Admin Login
+                </a>
+
+            {% endif %}
 
         </div>
 
-        <a href="#">Contact</a>
-        <a href="#">Our Policy</a>
-
     </div>
-
-</div>
 
 
 <!-- SIDE CART -->
@@ -156,10 +179,27 @@
         <h1>
             {{ product.name }}
         </h1>
+<p class="product-detail-price" id="productPrice">
 
-        <p class="product-detail-price">
+    {% if product.is_on_sale and product.sale_price %}
+
+        <span class="old-price">
             LE {{ product.price }}
-        </p>
+        </span>
+
+        <span class="sale-price">
+            LE {{ product.sale_price }}
+        </span>
+
+    {% else %}
+
+        <span class="regular-price">
+            LE {{ product.price }}
+        </span>
+
+    {% endif %}
+
+</p>
 
         {% if product.description %}
 
@@ -175,35 +215,87 @@
             </p>
 
         {% endif %}
+{% if variants %}
+
+    <!-- PRODUCT HAS VARIANTS -->
+
+    <p class="product-stock" id="productStock">
+        Choose a color
+    </p>
+
+    <div class="product-options">
+
+        <label for="colorSelect">
+            Color
+        </label>
+
+        <select id="colorSelect">
+
+            <option value="">
+                Choose a color
+            </option>
+
+            {% for variant in variants %}
+
+                {% if variant.color %}
+
+                    <option value="{{ variant.color }}">
+                        {{ variant.color }}
+                    </option>
+
+                {% endif %}
+
+            {% endfor %}
+
+        </select>
+
+    </div>
+
+    <button
+        class="btn-add product-detail-add"
+        id="productDetailAdd"
+        data-product-id="{{ product.id }}"
+        disabled
+    >
+        Choose a Color
+    </button>
 
 
-        {% if product.stock > 0 %}
+{% elif product.stock > 0 %}
 
-            <p class="product-stock">
-                In stock
-            </p>
+    <!-- PRODUCT WITHOUT VARIANTS -->
 
-            <button
-                class="btn-add product-detail-add"
-                data-product-id="{{ product.id }}"
-            >
-                Add to cart
-            </button>
+    <p class="product-stock" id="productStock">
+        In stock
+    </p>
 
-        {% else %}
+    <button
+        class="btn-add product-detail-add"
+        id="productDetailAdd"
+        data-product-id="{{ product.id }}"
+    >
+        Add to cart
+    </button>
 
-            <p class="product-stock out">
-                Out of stock
-            </p>
 
-            <button
-                class="btn-add product-detail-add"
-                disabled
-            >
-                Out of Stock
-            </button>
+{% else %}
 
-        {% endif %}
+    <!-- PRODUCT COMPLETELY OUT OF STOCK -->
+
+    <p class="product-stock out" id="productStock">
+        OUT OF STOCK
+    </p>
+
+    <button
+        class="btn-add product-detail-add"
+        id="productDetailAdd"
+        data-product-id="{{ product.id }}"
+        disabled
+    >
+        Out of Stock
+    </button>
+
+{% endif %}
         <a
          href="javascript:history.back()"
          class="back-to-shop"
@@ -292,6 +384,8 @@
 <!-- PRODUCT DATA FOR JAVASCRIPT -->
 
 {{ products|json_script:"products-data" }}
+{{ variants|json_script:"variants-data" }}
+
 
 <script src="{% static 'js/Script1.js' %}"></script>
 </body>

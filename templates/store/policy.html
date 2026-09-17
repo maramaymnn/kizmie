@@ -1,0 +1,322 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimzie</title>
+
+    <link rel="stylesheet" href="{% static 'css/OnlineStorePage1.css' %}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+        <button class="menu-btn" id="openBtn"></button>
+
+        <h2 class="logo">
+            <a href="{% url 'home' %}">Kimzie</a>
+        </h2>
+
+        <div class="nav-icons">
+
+            <button class="nav-icon search-icon" id="searchBtn">
+                <span></span>
+            </button>
+
+            <a href="#" class="nav-icon cart-icon" id="cartBtn">
+    <span class="cart-symbol">🛒</span>
+    <span id="cartCount"></span>
+</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MENU OVERLAY ================= -->
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <div class="search-box" id="searchBox">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for a product..."
+        >
+
+        <div id="searchResults"></div>
+
+    </div>
+
+
+    <!-- ================= SIDE MENU ================= -->
+
+    <div class="side-menu" id="sideMenu">
+
+        <button class="close-btn" id="closeBtn">
+            ×
+        </button>
+
+        <div class="menu-content">
+
+            <button class="shop-all-btn">
+                Shop All
+            </button>
+
+            <div class="categories">
+
+                <a href="{% url 'bags' %}">
+                    Bags
+                </a>
+
+                <a href="{% url 'wallets' %}">
+                    Wallets
+                </a>
+
+                <a href="{% url 'belts' %}">
+                    Belts
+                </a>
+
+            </div>
+
+
+            <a href="{% url 'contact' %}">Contact</a>
+
+            <a href="{% url 'policy' %}">
+                Our Policy
+            </a>
+
+
+            {% if user.is_authenticated and user.is_staff %}
+
+                <a href="/admin/">
+                    Admin Dashboard
+                </a>
+
+                <a href="{% url 'admin_logout' %}">
+                    Logout
+                </a>
+
+            {% else %}
+
+                <a href="{% url 'admin_login' %}">
+                    Admin Login
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SIDE CART ================= -->
+
+    <div class="side-cart" id="sideCart">
+
+        <div class="cart-nav">
+
+            <h3>
+                Shopping Cart
+            </h3>
+
+            <button class="close-btn" id="closeCartBtn">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems">
+
+            <p class="empty-msg">
+                Your cart is empty
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="total-price">
+
+                <span>
+                    Total:
+                </span>
+
+                <span id="cartTotal">
+                    LE 0.00
+                </span>
+
+            </div>
+
+
+            <a
+                href="{% url 'checkout' %}"
+                class="checkout-btn"
+                id="checkoutBtn"
+            >
+                Checkout
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- POLICY -->
+
+    <main class="policy-page">
+
+        <div class="policy-header">
+
+    <h1>
+        {{ policy.title|default:"Our Policy" }}
+    </h1>
+
+</div>
+<div class="policy-content">
+
+    {% if policy %}
+
+        <section class="policy-rule">
+            <h2>{{ policy.no_refunds_title }}</h2>
+            <p>{{ policy.no_refunds_text }}</p>
+        </section>
+
+        <section class="policy-rule">
+            <h2>{{ policy.inspection_title }}</h2>
+            <p>{{ policy.inspection_text }}</p>
+        </section>
+
+        <section class="policy-rule">
+            <h2>{{ policy.refused_title }}</h2>
+            <p>{{ policy.refused_text }}</p>
+        </section>
+
+        <section class="policy-rule">
+            <h2>{{ policy.damaged_title }}</h2>
+            <p>{{ policy.damaged_text }}</p>
+        </section>
+
+        <section class="policy-rule">
+            <h2>{{ policy.confirmation_title }}</h2>
+            <p>{{ policy.confirmation_text }}</p>
+        </section>
+
+    {% else %}
+
+        <p>
+            Our policy information will be available here soon.
+        </p>
+
+    {% endif %}
+
+</div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="main-footer">
+
+        <div class="footer-container">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-col">
+
+                <h3 class="footer-logo">
+                    kimzie
+                </h3>
+
+                <p>
+                    Your ultimate destination for trendy
+                    and high-quality bags, wallets, and belts.
+                </p>
+
+            </div>
+
+
+            <!-- SOCIAL -->
+
+            <div class="footer-col">
+
+                <h4>
+                    Follow Us
+                </h4>
+
+                <div class="social-links">
+
+                    <a href="#" target="_blank">
+                        Instagram
+                    </a>
+
+                    <a href="#" target="_blank">
+                        Facebook
+                    </a>
+
+                    <a href="#" target="_blank">
+                        TikTok
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PAYMENT -->
+
+            <div class="footer-col">
+
+                <h4>
+                    Payment Methods
+                </h4>
+
+                <div class="payment-methods">
+
+                    <span>
+                        💵 Cash on Delivery
+                    </span>
+
+                    <span>
+                        💳 Credit / Debit Card
+                    </span>
+
+                    <span>
+                        📱 Vodafone Cash / Instapay
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Kimzie Store.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="{% static 'js/Script1.js' %}"></script>
+
+</body>
+</html>

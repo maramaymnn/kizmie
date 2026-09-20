@@ -9,13 +9,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'HIDDEN')
 
 DEBUG = True
-
 ALLOWED_HOSTS = [
-    "kizmie.vercel.app",
-    "localhost",
-    "127.0.0.1",
+    'kizmie.vercel.app',
+    'localhost',
+    '127.0.0.1',
 ]
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://kizmie.vercel.app',
+]
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',

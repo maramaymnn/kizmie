@@ -1,0 +1,4651 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$BZOUjBQK3jrJss2uVktiKi$wkuc1e9v3Qd3MFnaQdL+gbj5lZhxztBZ9apvtMSNeSs=",
+    "last_login": "2026-09-17T02:52:58.693Z",
+    "is_superuser": true,
+    "username": "maram",
+    "first_name": "",
+    "last_name": "",
+    "email": "maramouda980@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-12T16:40:29.549Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$X5Ch6xVgZITJpUfVzb2KU3$W0cgqrKY/aCE1PUySGNTXuQ6cA+UuvbDIASuNS3xJCw=",
+    "last_login": "2026-09-17T01:41:34.086Z",
+    "is_superuser": false,
+    "username": "Maram Ouda",
+    "first_name": "",
+    "last_name": "",
+    "email": "maramouda112@icloud.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-17T01:41:32.324Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$KbqvkprUKZsUJGykN7VhBN$Tok1WC8LhTedStsKLh5+ZueYFgErTBF4ZRKOAx0OgSg=",
+    "last_login": "2026-09-17T02:18:01.575Z",
+    "is_superuser": false,
+    "username": "mohamed",
+    "first_name": "",
+    "last_name": "",
+    "email": "mohamed@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-17T01:45:08.867Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$Msc52yJ0UIjJ4x5GzoCIF0$daMmncZcMDE8qVvJpn3tYJxa/6g4ciphZWe7gh0Hxag=",
+    "last_login": "2026-09-17T02:22:17.831Z",
+    "is_superuser": false,
+    "username": "Maramayman",
+    "first_name": "",
+    "last_name": "",
+    "email": "maram@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-17T02:22:17.032Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6vurkxcyvjkzs8evig78bot63qoaf6ih",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCBAYJL956BDMMgVQNJaVfGu9smXej2v_f-W0RclxrXwXOcsrgIJU6_W0J6cttBfmC7d0m9LfOU5K7Igw5565lf18P9O6g46lbbVJzOVPBMDgMQWMOA2REpTkppHwwkZwKqwilY2lwNrhSk4jM4Lz5fCjw47g:1x72F7:LgOOhAWuvob8TNjMfVLVC3ngt6MdaMA_PRrS3vUVjD4",
+    "expire_date": "2026-10-01T02:52:57.801Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "g6flyfrdw68tlr8z30te4c7rtjc4qvb6",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQRf-la9L0NRRYuvcLDCHTmSqooUkLK-O_C4aF7m7uOTkvMeC6jMNaYh4mFp1wovr9AtIjzjvgO863JCnNS56C3BV50CLPiePzdLh_gRHLuGcj1yZqxdrg1QZQlgMF1zTaGAcWHHkE7UPdMoB3ZMDopibbAqGPVm3Rby5ljrmI7uJUXwnCvGy7f38AnGhAgg:1x71n1:psNdu6zE9PsW2K6fyOxPk0N73Zk_2ywDd_XhLEczjvo",
+    "expire_date": "2026-10-01T02:23:55.468Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "i105j5ltpfb2xnz435o2gh56kdzzynt3",
+  "fields": {
+    "session_data": "eyJ1c2VyX29yZGVycyI6WzIyXSwiY2FydCI6W119:1x5ltv:Dcvrin3yKrnBdad26DhOm_kio-yXQpJAJcj7VX4UF-4",
+    "expire_date": "2026-09-27T15:13:51.549Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "i2l6hhqyabvkktus4j6bpyd34hxl4brg",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-Fc0OEbmno0btfYJpmWRZbNSUBejL-u9T0oMeZefNeYsKtzNOWOU2LF4NQovntHNKD133wd1xvUVJcS1qc3BF5rFleoufn-WD_BDPmub47F4z2FPBEBi0QdC0DekOk2Cmle9uCM61FFdjZjiqrwYSAFHoPpq_Sry4mzymL4QqqAT02gjCVGsf3B896QwA:1x7K15:9f-UZJUF1-JqgsmH3wl5mmsS2D5HR797_JUPadQuVdQ",
+    "expire_date": "2026-10-01T21:51:39.185Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "w56jpj6srezkuec7ehexvtzumdy940mk",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyF0EQgevfsNhF0WqRpISnsy_rs06UFPM5k3M28R4raWsHVewpzERYA4_WYY6cl1B-kR671JanVdZpR7RR60y1tL_Loe3b-DEnsZa-N9Ju-d18iIBoDcUKtBKeuMAlQKz5mGtZNDNzFFr03KBkhnSCw-X9ioN9A:1x7182:AKhKV6uoY5Aw79yvgoePR2x6pOGRjIe47FjIWle0Q9A",
+    "expire_date": "2026-10-01T01:41:34.095Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xm82ucgajuwwx98yygft6onl6bmkuq0p",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCBAYJL956BDMMgVQNJaVfGu9smXej2v_f-W0RclxrXwXOcsrgIJU6_W0J6cttBfmC7d0m9LfOU5K7Igw5565lf18P9O6g46lbbVJzOVPBMDgMQWMOA2REpTkppHwwkZwKqwilY2lwNrhSk4jM4Lz5fCjw47g:1x72F6:yKNO0s6gshaDQrvKr0GL7xSK3B-ZE1lP7WYe_0RAIfo",
+    "expire_date": "2026-10-01T02:52:56.664Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 1,
+  "fields": {
+    "name": "Gucci Dionysus Mini Bag",
+    "price": "1250.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/736x/ef/ee/ad/efeead5ea174506b2332e0366e9d4b6d.jpg",
+    "category": "bags",
+    "page": 1,
+    "stock": 4,
+    "is_best_seller": true,
+    "created_at": "2026-09-12T17:10:26.930Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 2,
+  "fields": {
+    "name": "Fendi Mini Bag",
+    "price": "1600.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/736x/5a/88/61/5a88619e4e526958f4d91348294dd7b0.jpg",
+    "category": "bags",
+    "page": 1,
+    "stock": 14,
+    "is_best_seller": true,
+    "created_at": "2026-09-12T17:11:04.303Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 3,
+  "fields": {
+    "name": "Channel Mini Bag",
+    "price": "1450.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/736x/8e/ee/5e/8eee5ef7281e28dea40a922f07619472.jpg",
+    "category": "bags",
+    "page": 1,
+    "stock": 17,
+    "is_best_seller": true,
+    "created_at": "2026-09-12T17:11:32.257Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 4,
+  "fields": {
+    "name": "long champ mini bag",
+    "price": "950.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/1200x/aa/5e/dc/aa5edcae23f8563f8670f69b1bc66390.jpg",
+    "category": "bags",
+    "page": 1,
+    "stock": 18,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T17:29:17.893Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 5,
+  "fields": {
+    "name": "Zadig&Voltaire Rock Leather-Shoulder bag",
+    "price": "1750.00",
+    "sale_price": "1550.00",
+    "is_on_sale": true,
+    "description": "",
+    "image_url": "https://i.pinimg.com/1200x/c4/b5/53/c4b5538c17dc97ba5eddc32cf84fb89f.jpg",
+    "category": "bags",
+    "page": 2,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T17:30:16.050Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 6,
+  "fields": {
+    "name": "Stella McCarteny Falabella",
+    "price": "1700.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/736x/66/7b/e3/667be34abbc6c3c2f228624feed32827.jpg",
+    "category": "bags",
+    "page": 2,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T17:30:48.755Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 7,
+  "fields": {
+    "name": "Lacoste",
+    "price": "1000.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/1200x/11/6d/e0/116de09b254332c93ce8f72d4af0533f.jpg",
+    "category": "bags",
+    "page": 2,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T17:31:22.470Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 8,
+  "fields": {
+    "name": "Chanel 25 Small-HandBag",
+    "price": "2200.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/736x/af/ca/c7/afcac7b1ec2afbd8d363d3c43083224c.jpg",
+    "category": "bags",
+    "page": 2,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T17:34:01.120Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 9,
+  "fields": {
+    "name": "Channel-handbag",
+    "price": "1900.00",
+    "sale_price": "1700.00",
+    "is_on_sale": true,
+    "description": "",
+    "image_url": "https://i.pinimg.com/1200x/d7/47/08/d747085a254017d50f8f689018e24aae.jpg",
+    "category": "bags",
+    "page": 3,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T19:51:42.314Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 10,
+  "fields": {
+    "name": "Ala∩a Le Coeur Leather-Crossbody Bag",
+    "price": "1750.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/1200x/78/f2/3a/78f23adc3531c77be4bf74452401411a.jpg",
+    "category": "bags",
+    "page": 3,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T19:52:14.515Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 11,
+  "fields": {
+    "name": "Small leather Channel",
+    "price": "1700.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/1200x/d0/0d/22/d00d22b3c3d6e0809a37be0769105d47.jpg",
+    "category": "bags",
+    "page": 3,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T19:52:49.090Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 12,
+  "fields": {
+    "name": "miu miu-crossbody",
+    "price": "1150.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/736x/10/aa/6f/10aa6fbc8b10c899e240f7591cc8a201.jpg",
+    "category": "bags",
+    "page": 3,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T19:53:25.221Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 13,
+  "fields": {
+    "name": "Golden Goose Star-Crossbody",
+    "price": "1750.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/736x/f2/ec/35/f2ec3596654483fbca0c638615ace07f.jpg",
+    "category": "bags",
+    "page": 4,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T19:53:58.792Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 14,
+  "fields": {
+    "name": "Coach-MiniBag",
+    "price": "1250.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/736x/c1/4b/65/c14b656ceca0ce9e338f081172b80b69.jpg",
+    "category": "bags",
+    "page": 4,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T19:54:26.549Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 15,
+  "fields": {
+    "name": "Coach Quilted Tabby 26 Black-ShoulderBag",
+    "price": "950.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/736x/48/14/12/48141213d041f87cb7ca00eeaa763853.jpg",
+    "category": "bags",
+    "page": 3,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T19:55:28.041Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 16,
+  "fields": {
+    "name": "marco jacobs",
+    "price": "1750.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/1200x/c0/a8/0c/c0a80c5f69f3b5d27fb2abd9aaad74c6.jpg",
+    "category": "bags",
+    "page": 4,
+    "stock": 1,
+    "is_best_seller": false,
+    "created_at": "2026-09-12T19:55:53.450Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 17,
+  "fields": {
+    "name": "dior-handbag",
+    "price": "2500.00",
+    "sale_price": "2350.00",
+    "is_on_sale": true,
+    "description": "",
+    "image_url": "https://i.pinimg.com/736x/de/3e/33/de3e33840f1845a1c96d632031df221b.jpg",
+    "category": "bags",
+    "page": 4,
+    "stock": 20,
+    "is_best_seller": false,
+    "created_at": "2026-09-13T01:03:00.029Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 18,
+  "fields": {
+    "name": "Saint Laurent-cardholder",
+    "price": "1200.00",
+    "sale_price": null,
+    "is_on_sale": true,
+    "description": "",
+    "image_url": "https://i.pinimg.com/1200x/97/bc/01/97bc01b7d2e4da281d4028833a3fc5ea.jpg",
+    "category": "wallets",
+    "page": 1,
+    "stock": 3,
+    "is_best_seller": true,
+    "created_at": "2026-09-17T00:19:04.482Z"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 19,
+  "fields": {
+    "name": "Louis Vuitton Monogram Belt",
+    "price": "1500.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "description": "",
+    "image_url": "https://i.pinimg.com/736x/aa/0d/ec/aa0dec0bb196fec688a107c1becf4e8e.jpg",
+    "category": "belts",
+    "page": 1,
+    "stock": 7,
+    "is_best_seller": true,
+    "created_at": "2026-09-17T00:20:21.666Z"
+  }
+},
+{
+  "model": "store.productvariant",
+  "pk": 1,
+  "fields": {
+    "product": 18,
+    "color": "Red",
+    "image_url": "https://i.pinimg.com/1200x/22/c9/98/22c998704dfafb9c13c95923db3cdf73.jpg",
+    "price": "1500.00",
+    "sale_price": "1350.00",
+    "is_on_sale": true,
+    "stock": 0
+  }
+},
+{
+  "model": "store.productvariant",
+  "pk": 2,
+  "fields": {
+    "product": 18,
+    "color": "White",
+    "image_url": "https://i.pinimg.com/736x/61/d8/30/61d830e8b2117d946d9268769586ca09.jpg",
+    "price": "1200.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "stock": 0
+  }
+},
+{
+  "model": "store.productvariant",
+  "pk": 3,
+  "fields": {
+    "product": 18,
+    "color": "black",
+    "image_url": "https://i.pinimg.com/1200x/97/bc/01/97bc01b7d2e4da281d4028833a3fc5ea.jpg",
+    "price": "1200.00",
+    "sale_price": null,
+    "is_on_sale": false,
+    "stock": 0
+  }
+},
+{
+  "model": "store.promocode",
+  "pk": 1,
+  "fields": {
+    "code": "save10",
+    "discount_percent": 10,
+    "is_active": true,
+    "created_at": "2026-09-13T18:25:01.973Z"
+  }
+},
+{
+  "model": "store.promocode",
+  "pk": 2,
+  "fields": {
+    "code": "maram20",
+    "discount_percent": 20,
+    "is_active": true,
+    "created_at": "2026-09-13T19:13:40.083Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 1,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "guest@store.com",
+    "address": "aghgvsahy",
+    "phone": "+201095153583",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T22:19:33.909Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 2,
+  "fields": {
+    "user": null,
+    "full_name": "hana",
+    "email": "guest@store.com",
+    "address": "dnxcdh",
+    "phone": "01451131",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T22:23:37.300Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 3,
+  "fields": {
+    "user": null,
+    "full_name": "maryam",
+    "email": "guest@store.com",
+    "address": "refergvf",
+    "phone": "0158489",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T23:27:49.347Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 4,
+  "fields": {
+    "user": null,
+    "full_name": "maryam",
+    "email": "guest@store.com",
+    "address": "refergvf",
+    "phone": "0158489",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T23:30:04.452Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 5,
+  "fields": {
+    "user": null,
+    "full_name": "maryam",
+    "email": "guest@store.com",
+    "address": "refergvf",
+    "phone": "0158489",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T23:31:53.627Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 6,
+  "fields": {
+    "user": null,
+    "full_name": "farah",
+    "email": "guest@store.com",
+    "address": "vhgdyf",
+    "phone": "015848454",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T23:32:12.495Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 7,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "guest@store.com",
+    "address": "hsedvcyu",
+    "phone": "0158489",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T23:36:17.931Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 8,
+  "fields": {
+    "user": null,
+    "full_name": "maryam",
+    "email": "guest@store.com",
+    "address": "bdcuh",
+    "phone": "01451131",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T23:38:48.035Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 9,
+  "fields": {
+    "user": null,
+    "full_name": "maryam",
+    "email": "guest@store.com",
+    "address": "dshfcyuds",
+    "phone": "054895416",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T23:43:45.361Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 10,
+  "fields": {
+    "user": null,
+    "full_name": "maryam",
+    "email": "guest@store.com",
+    "address": "ctdty",
+    "phone": "+201095153583",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T23:45:39.675Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 11,
+  "fields": {
+    "user": null,
+    "full_name": "yasmin",
+    "email": "guest@store.com",
+    "address": "dgcyudg",
+    "phone": "1515415",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T23:48:03.103Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 12,
+  "fields": {
+    "user": null,
+    "full_name": "yasmin",
+    "email": "guest@store.com",
+    "address": "dgcyudg",
+    "phone": "1515415",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "0.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-12T23:49:29.579Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 13,
+  "fields": {
+    "user": null,
+    "full_name": "maryam",
+    "email": "guest@store.com",
+    "address": "ndiewhif",
+    "phone": "0646441",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "950.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T00:21:48.362Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 14,
+  "fields": {
+    "user": null,
+    "full_name": "maryam",
+    "email": "guest@store.com",
+    "address": "sdciudgshuc",
+    "phone": "02165494",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "950.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T00:22:08.532Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 15,
+  "fields": {
+    "user": null,
+    "full_name": "farah",
+    "email": "guest@store.com",
+    "address": "ytdtysxty",
+    "phone": "165454",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "2850.00",
+    "payment_method": "Online",
+    "status": "Confirmed",
+    "is_paid": true,
+    "created_at": "2026-09-13T00:35:13.017Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 16,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "guest@store.com",
+    "address": "vthfyhc",
+    "phone": "0165464",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "1750.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T00:41:36.040Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 17,
+  "fields": {
+    "user": null,
+    "full_name": "lina",
+    "email": "guest@store.com",
+    "address": "ftdyhxh",
+    "phone": "021658454",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "3500.00",
+    "payment_method": "Online",
+    "status": "Confirmed",
+    "is_paid": true,
+    "created_at": "2026-09-13T01:01:51.319Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 18,
+  "fields": {
+    "user": null,
+    "full_name": "jana",
+    "email": "guest@store.com",
+    "address": "c sjbcjuds",
+    "phone": "51651651",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "2500.00",
+    "payment_method": "Online",
+    "status": "Confirmed",
+    "is_paid": true,
+    "created_at": "2026-09-13T01:03:37.902Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 19,
+  "fields": {
+    "user": null,
+    "full_name": "yasmin",
+    "email": "guest@store.com",
+    "address": "bcfdbsiucf",
+    "phone": "01584949",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "1700.00",
+    "payment_method": "Online",
+    "status": "Confirmed",
+    "is_paid": true,
+    "created_at": "2026-09-13T01:17:18.810Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 20,
+  "fields": {
+    "user": null,
+    "full_name": "sjbkdv",
+    "email": "guest@store.com",
+    "address": "cbjsdb",
+    "phone": "1464654",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "3950.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T01:54:20.509Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 21,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "guest@store.com",
+    "address": "dsjbcjds",
+    "phone": "016546",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "1250.00",
+    "payment_method": "COD",
+    "status": "Processing",
+    "is_paid": false,
+    "created_at": "2026-09-13T14:55:32.035Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 22,
+  "fields": {
+    "user": null,
+    "full_name": "koko",
+    "email": "guest@store.com",
+    "address": "rbgcfug",
+    "phone": "0154584",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "2700.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T15:13:51.519Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 23,
+  "fields": {
+    "user": null,
+    "full_name": "dfbvdfj",
+    "email": "guest@store.com",
+    "address": "sbchfr",
+    "phone": "0231646",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "4200.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T16:27:15.045Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 24,
+  "fields": {
+    "user": null,
+    "full_name": "dcbjdbsjc",
+    "email": "guest@store.com",
+    "address": "kjcj nkx",
+    "phone": "01095153583",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "1750.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T18:07:16.278Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 25,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "guest@store.com",
+    "address": "dchadvshdcv",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "1440.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T19:06:59.316Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 26,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "guest@store.com",
+    "address": "hdsvchds",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "1530.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T19:13:01.088Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 27,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "guest@store.com",
+    "address": "DJCD",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "1000.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T19:14:19.174Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 28,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "guest@store.com",
+    "address": "hdbcsjc",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "1880.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T20:45:48.956Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 29,
+  "fields": {
+    "user": null,
+    "full_name": "hdvsdac",
+    "email": "guest@store.com",
+    "address": "sbdcjdb",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "950.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T20:53:13.567Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 30,
+  "fields": {
+    "user": null,
+    "full_name": "dvsdfv",
+    "email": "guest@store.com",
+    "address": "vyfyu",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "2500.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T21:00:28.517Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 31,
+  "fields": {
+    "user": null,
+    "full_name": "dvsdfv",
+    "email": "guest@store.com",
+    "address": "vyfyu",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "2500.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T21:06:52.248Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 32,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "guest@store.com",
+    "address": "grgvf",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "1280.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T21:08:29.716Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 33,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "guest@store.com",
+    "address": "sd cb dskjbc",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "1150.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-13T23:54:14.675Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 34,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "guest@store.com",
+    "address": "bcjx bjc",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "1000.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-15T19:54:32.759Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 35,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "maramouda112@icloud.com",
+    "address": "sxdvashd",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "4100.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-16T21:42:04.205Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 36,
+  "fields": {
+    "user": null,
+    "full_name": "maram",
+    "email": "maramouda112@icloud.com",
+    "address": "dsfcfsd",
+    "phone": "01012345678",
+    "governorate": "",
+    "city": "",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "0.00",
+    "total_price": "4100.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-16T22:00:56.453Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 37,
+  "fields": {
+    "user": [
+      "maram"
+    ],
+    "full_name": "maram",
+    "email": "maramouda112@icloud.com",
+    "address": "kjvnkdr",
+    "phone": "01012345678",
+    "governorate": "Dakahlia",
+    "city": "mansoura",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "80.00",
+    "total_price": "5280.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-16T22:04:28.943Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 38,
+  "fields": {
+    "user": [
+      "mohamed"
+    ],
+    "full_name": "mohamed",
+    "email": "mohamed@gmail.com",
+    "address": "dschjhbsd",
+    "phone": "01012345678",
+    "governorate": "Dakahlia",
+    "city": "mansoura",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "80.00",
+    "total_price": "8680.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-17T01:48:45.965Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 39,
+  "fields": {
+    "user": [
+      "mohamed"
+    ],
+    "full_name": "maram",
+    "email": "mohamed@gmail.com",
+    "address": "fvbf",
+    "phone": "01012345678",
+    "governorate": "Dakahlia",
+    "city": "mansoura",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "80.00",
+    "total_price": "2480.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-17T02:01:43.343Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 40,
+  "fields": {
+    "user": [
+      "Maramayman"
+    ],
+    "full_name": "Maram",
+    "email": "maram@gmail.com",
+    "address": "Hshshs",
+    "phone": "01095153583",
+    "governorate": "Dakahlia",
+    "city": "Ansourashhsn",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "80.00",
+    "total_price": "4180.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-17T02:23:55.462Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 41,
+  "fields": {
+    "user": [
+      "maram"
+    ],
+    "full_name": "farah",
+    "email": "maramouda112@icloud.com",
+    "address": "cascds",
+    "phone": "01012345678",
+    "governorate": "Dakahlia",
+    "city": "mansoura",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "80.00",
+    "total_price": "18830.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-17T20:44:32.512Z"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 42,
+  "fields": {
+    "user": [
+      "maram"
+    ],
+    "full_name": "maryam",
+    "email": "mohamed@gmail.com",
+    "address": "cb dfbgdf",
+    "phone": "01012345678",
+    "governorate": "Dakahlia",
+    "city": "mansoura",
+    "shipping_method": "Standard Delivery",
+    "shipping_cost": "80.00",
+    "total_price": "2780.00",
+    "payment_method": "COD",
+    "status": "Confirmed",
+    "is_paid": false,
+    "created_at": "2026-09-17T21:51:39.168Z"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 13,
+    "product": 4,
+    "variant": null,
+    "price": "950.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 14,
+    "product": 4,
+    "variant": null,
+    "price": "950.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 15,
+    "product": 4,
+    "variant": null,
+    "price": "950.00",
+    "quantity": 3
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 4,
+  "fields": {
+    "order": 16,
+    "product": 5,
+    "variant": null,
+    "price": "1750.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 5,
+  "fields": {
+    "order": 17,
+    "product": 5,
+    "variant": null,
+    "price": "1750.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 6,
+  "fields": {
+    "order": 17,
+    "product": 10,
+    "variant": null,
+    "price": "1750.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 7,
+  "fields": {
+    "order": 18,
+    "product": 17,
+    "variant": null,
+    "price": "2500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 8,
+  "fields": {
+    "order": 19,
+    "product": 6,
+    "variant": null,
+    "price": "1700.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 9,
+  "fields": {
+    "order": 20,
+    "product": 5,
+    "variant": null,
+    "price": "1750.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 10,
+  "fields": {
+    "order": 20,
+    "product": 8,
+    "variant": null,
+    "price": "2200.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 11,
+  "fields": {
+    "order": 21,
+    "product": 1,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 12,
+  "fields": {
+    "order": 22,
+    "product": 3,
+    "variant": null,
+    "price": "1450.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 13,
+  "fields": {
+    "order": 22,
+    "product": 14,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 14,
+  "fields": {
+    "order": 23,
+    "product": 1,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 15,
+  "fields": {
+    "order": 23,
+    "product": 6,
+    "variant": null,
+    "price": "1700.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 16,
+  "fields": {
+    "order": 24,
+    "product": 13,
+    "variant": null,
+    "price": "1750.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 17,
+  "fields": {
+    "order": 25,
+    "product": 2,
+    "variant": null,
+    "price": "1600.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 18,
+  "fields": {
+    "order": 26,
+    "product": 6,
+    "variant": null,
+    "price": "1700.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 19,
+  "fields": {
+    "order": 27,
+    "product": 1,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 20,
+  "fields": {
+    "order": 28,
+    "product": 17,
+    "variant": null,
+    "price": "2350.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 21,
+  "fields": {
+    "order": 29,
+    "product": 15,
+    "variant": null,
+    "price": "950.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 22,
+  "fields": {
+    "order": 30,
+    "product": 1,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 23,
+  "fields": {
+    "order": 31,
+    "product": 1,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 24,
+  "fields": {
+    "order": 32,
+    "product": 2,
+    "variant": null,
+    "price": "1600.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 25,
+  "fields": {
+    "order": 33,
+    "product": 12,
+    "variant": null,
+    "price": "1150.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 26,
+  "fields": {
+    "order": 34,
+    "product": 1,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 27,
+  "fields": {
+    "order": 35,
+    "product": 1,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 28,
+  "fields": {
+    "order": 35,
+    "product": 2,
+    "variant": null,
+    "price": "1600.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 29,
+  "fields": {
+    "order": 36,
+    "product": 1,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 30,
+  "fields": {
+    "order": 36,
+    "product": 2,
+    "variant": null,
+    "price": "1600.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 31,
+  "fields": {
+    "order": 37,
+    "product": 1,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 32,
+  "fields": {
+    "order": 37,
+    "product": 2,
+    "variant": null,
+    "price": "1600.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 33,
+  "fields": {
+    "order": 37,
+    "product": 4,
+    "variant": null,
+    "price": "950.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 34,
+  "fields": {
+    "order": 37,
+    "product": 3,
+    "variant": null,
+    "price": "1450.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 35,
+  "fields": {
+    "order": 38,
+    "product": 1,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 36,
+  "fields": {
+    "order": 38,
+    "product": 2,
+    "variant": null,
+    "price": "1600.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 37,
+  "fields": {
+    "order": 38,
+    "product": 4,
+    "variant": null,
+    "price": "950.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 38,
+  "fields": {
+    "order": 38,
+    "product": 3,
+    "variant": null,
+    "price": "1450.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 39,
+  "fields": {
+    "order": 38,
+    "product": 18,
+    "variant": null,
+    "price": "1200.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 40,
+  "fields": {
+    "order": 39,
+    "product": 18,
+    "variant": null,
+    "price": "1200.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 41,
+  "fields": {
+    "order": 40,
+    "product": 1,
+    "variant": null,
+    "price": "1250.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 42,
+  "fields": {
+    "order": 40,
+    "product": 2,
+    "variant": null,
+    "price": "1600.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 43,
+  "fields": {
+    "order": 41,
+    "product": 18,
+    "variant": 2,
+    "price": "1200.00",
+    "quantity": 5
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 44,
+  "fields": {
+    "order": 41,
+    "product": 18,
+    "variant": 3,
+    "price": "1200.00",
+    "quantity": 5
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 45,
+  "fields": {
+    "order": 41,
+    "product": 18,
+    "variant": 1,
+    "price": "1350.00",
+    "quantity": 5
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 46,
+  "fields": {
+    "order": 42,
+    "product": 18,
+    "variant": 1,
+    "price": "1350.00",
+    "quantity": 2
+  }
+},
+{
+  "model": "store.deliveryzone",
+  "pk": 1,
+  "fields": {
+    "governorate": "Dakahlia",
+    "delivery_price": "80.00",
+    "is_active": true,
+    "shipping_company": ""
+  }
+},
+{
+  "model": "store.contactmessage",
+  "pk": 1,
+  "fields": {
+    "name": "maram",
+    "email": "maramouda112@icloud.com",
+    "phone": "01012345678",
+    "message": "hi",
+    "created_at": "2026-09-16T23:08:26.895Z"
+  }
+},
+{
+  "model": "store.policy",
+  "pk": 1,
+  "fields": {
+    "title": "Our Policy",
+    "no_refunds_title": "No Refunds or Exchanges",
+    "no_refunds_text": "Kindly note that all orders are final. We do not accept refunds or exchanges after the order has been received and accepted.",
+    "inspection_title": "Order Inspection",
+    "inspection_text": "Kindly inspect your order carefully upon delivery before accepting it. Please make sure that the item, size, color, and condition are as expected.",
+    "refused_title": "Refused Orders",
+    "refused_text": "If you choose to refuse your order at the time of delivery, you may do so. However, the customer will be responsible for any applicable delivery and return shipping fees.",
+    "damaged_title": "Damaged or Incorrect Items",
+    "damaged_text": "If you receive an item that is damaged or incorrect, kindly contact Kimzie as soon as possible and provide your order details along with clear photos of the item. We will review the issue and assist you accordingly.",
+    "confirmation_title": "Order Confirmation",
+    "confirmation_text": "By placing an order with Kimzie, you confirm that you have read, understood, and agreed to our policy before completing your purchase.",
+    "updated_at": "2026-09-16T23:58:45.965Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-09-12T17:10:26.933Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-09-12T17:11:04.304Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-09-12T17:11:32.258Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Channel Mini Bag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-09-12T17:28:11.794Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Channel Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-09-12T17:28:19.529Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-09-12T17:28:25.654Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-09-12T17:29:17.895Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "long champ mini bag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-09-12T17:30:16.052Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "5",
+    "object_repr": "Zadig&Voltaire Rock Leather-Shoulder bag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-09-12T17:30:48.756Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Stella McCarteny Falabella",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-09-12T17:31:22.471Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "7",
+    "object_repr": "Lacoste",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-09-12T17:34:01.121Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "8",
+    "object_repr": "Chanel 25 Small-HandBag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-09-12T17:40:17.421Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "8",
+    "object_repr": "Chanel 25 Small-HandBag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-09-12T19:51:42.318Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "9",
+    "object_repr": "Channel-handbag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-09-12T19:52:14.518Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "10",
+    "object_repr": "Ala∩a Le Coeur Leather-Crossbody Bag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-09-12T19:52:49.092Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "11",
+    "object_repr": "Small leather Channel",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-09-12T19:53:25.224Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "12",
+    "object_repr": "miu miu-crossbody",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-09-12T19:53:58.795Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "13",
+    "object_repr": "Golden Goose Star-Crossbody",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-09-12T19:54:26.551Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "14",
+    "object_repr": "Coach-MiniBag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-09-12T19:55:28.046Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "15",
+    "object_repr": "Coach Quilted Tabby 26 Black-ShoulderBag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-09-12T19:55:53.454Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "16",
+    "object_repr": "marco jacobs",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-09-12T20:08:19.849Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "16",
+    "object_repr": "marco jacobs",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-09-12T20:08:46.079Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "15",
+    "object_repr": "Coach Quilted Tabby 26 Black-ShoulderBag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-09-12T20:18:56.977Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-09-12T20:19:01.255Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Stella McCarteny Falabella",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-09-12T20:28:13.299Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-09-12T20:28:29.397Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-09-12T20:28:34.313Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Channel Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-09-12T21:51:33.227Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-09-13T00:18:37.293Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-09-13T00:19:40.638Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Channel Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-09-13T00:57:07.416Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-09-13T00:57:10.901Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Channel Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-09-13T00:57:14.508Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Channel Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-09-13T00:57:20.569Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "9",
+    "object_repr": "Channel-handbag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-09-13T00:58:24.862Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "11",
+    "object_repr": "Small leather Channel",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-09-13T01:03:00.031Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "17",
+    "object_repr": "dior-handbag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-09-13T01:18:13.026Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-09-13T01:18:18.530Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-09-13T01:18:23.724Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Channel Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-09-13T01:18:27.885Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "long champ mini bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-09-13T01:18:38.288Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "5",
+    "object_repr": "Zadig&Voltaire Rock Leather-Shoulder bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\", \"Is available\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-09-13T01:18:43.293Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "5",
+    "object_repr": "Zadig&Voltaire Rock Leather-Shoulder bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-09-13T01:18:50.302Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Stella McCarteny Falabella",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-09-13T01:18:56.333Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "7",
+    "object_repr": "Lacoste",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-09-13T01:19:00.791Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "8",
+    "object_repr": "Chanel 25 Small-HandBag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-09-13T01:19:05.578Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "9",
+    "object_repr": "Channel-handbag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-09-13T01:19:12.612Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "10",
+    "object_repr": "Ala∩a Le Coeur Leather-Crossbody Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-09-13T01:19:18.151Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "11",
+    "object_repr": "Small leather Channel",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-09-13T01:19:22.417Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "11",
+    "object_repr": "Small leather Channel",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-09-13T01:19:26.722Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "12",
+    "object_repr": "miu miu-crossbody",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-09-13T01:19:30.376Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "13",
+    "object_repr": "Golden Goose Star-Crossbody",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-09-13T01:19:34.072Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "15",
+    "object_repr": "Coach Quilted Tabby 26 Black-ShoulderBag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-09-13T01:19:37.871Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "16",
+    "object_repr": "marco jacobs",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-09-13T01:19:41.599Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "15",
+    "object_repr": "Coach Quilted Tabby 26 Black-ShoulderBag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-09-13T01:19:44.875Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "16",
+    "object_repr": "marco jacobs",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-09-13T01:19:53.004Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "17",
+    "object_repr": "dior-handbag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-09-13T02:12:41.644Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Stella McCarteny Falabella",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-09-13T02:12:52.119Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "10",
+    "object_repr": "Ala∩a Le Coeur Leather-Crossbody Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\", \"Is available\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-09-13T02:13:21.795Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "15",
+    "object_repr": "Coach Quilted Tabby 26 Black-ShoulderBag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-09-13T02:15:42.085Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Stella McCarteny Falabella",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is available\", \"Is best seller\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-09-13T02:16:52.000Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "13",
+    "object_repr": "Golden Goose Star-Crossbody",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is best seller\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-09-13T02:19:26.571Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "17",
+    "object_repr": "dior-handbag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Is available\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-09-13T02:19:33.049Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "8",
+    "object_repr": "Chanel 25 Small-HandBag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-09-13T02:21:47.672Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Page\", \"Is best seller\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-09-13T02:21:57.845Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Page\", \"Is best seller\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-09-13T02:22:07.126Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Channel Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Page\", \"Is best seller\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-09-13T02:22:18.202Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "long champ mini bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Stock\", \"Is available\", \"Is best seller\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-09-13T02:22:41.845Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "long champ mini bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is best seller\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-09-13T02:47:47.469Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "long champ mini bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-09-13T02:55:08.577Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-09-13T02:55:17.387Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-09-13T02:55:23.653Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-09-13T02:55:28.631Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Channel Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-09-13T02:55:35.487Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "long champ mini bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-09-13T02:55:49.895Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "5",
+    "object_repr": "Zadig&Voltaire Rock Leather-Shoulder bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-09-13T02:56:01.724Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Stella McCarteny Falabella",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-09-13T02:56:09.637Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "7",
+    "object_repr": "Lacoste",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-09-13T02:56:18.683Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "8",
+    "object_repr": "Chanel 25 Small-HandBag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\", \"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-09-13T02:56:30.541Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "9",
+    "object_repr": "Channel-handbag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-09-13T02:56:40.915Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "10",
+    "object_repr": "Ala∩a Le Coeur Leather-Crossbody Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-09-13T02:56:57.228Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "11",
+    "object_repr": "Small leather Channel",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-09-13T02:57:12.084Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "12",
+    "object_repr": "miu miu-crossbody",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-09-13T02:57:20.403Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "13",
+    "object_repr": "Golden Goose Star-Crossbody",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-09-13T02:57:31.163Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "14",
+    "object_repr": "Coach-MiniBag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-09-13T02:57:40.443Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "15",
+    "object_repr": "Coach Quilted Tabby 26 Black-ShoulderBag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-09-13T02:57:49.140Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "16",
+    "object_repr": "marco jacobs",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\", \"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-09-13T02:57:55.028Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "16",
+    "object_repr": "marco jacobs",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2026-09-13T02:58:01.156Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "17",
+    "object_repr": "dior-handbag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2026-09-13T02:58:07.525Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2026-09-13T03:00:44.421Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2026-09-13T15:05:19.402Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "order"
+    ],
+    "object_id": "21",
+    "object_repr": "Order #21 - maram",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2026-09-13T15:05:49.432Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "order"
+    ],
+    "object_id": "21",
+    "object_repr": "Order #21 - maram",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2026-09-13T18:07:53.816Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2026-09-13T18:08:14.196Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2026-09-13T18:10:11.010Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2026-09-13T18:10:25.683Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2026-09-13T18:10:47.158Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2026-09-13T18:10:49.248Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2026-09-13T18:11:33.845Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "long champ mini bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2026-09-13T18:11:49.556Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "long champ mini bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2026-09-13T18:13:20.167Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2026-09-13T18:13:47.888Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2026-09-13T18:14:19.801Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2026-09-13T18:25:01.980Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "promocode"
+    ],
+    "object_id": "1",
+    "object_repr": "save10%",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2026-09-13T18:40:40.280Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "promocode"
+    ],
+    "object_id": "1",
+    "object_repr": "save10%",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2026-09-13T18:45:26.478Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "promocode"
+    ],
+    "object_id": "1",
+    "object_repr": "save10",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Code\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2026-09-13T18:52:29.143Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "promocode"
+    ],
+    "object_id": "1",
+    "object_repr": "save10",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2026-09-13T18:54:50.160Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "promocode"
+    ],
+    "object_id": "1",
+    "object_repr": "save10",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2026-09-13T19:00:52.477Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "promocode"
+    ],
+    "object_id": "1",
+    "object_repr": "save10",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2026-09-13T19:13:40.091Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "promocode"
+    ],
+    "object_id": "2",
+    "object_repr": "maram20",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2026-09-13T19:24:55.839Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "17",
+    "object_repr": "dior-handbag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sale price\", \"Is on sale\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2026-09-13T19:25:16.265Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "17",
+    "object_repr": "dior-handbag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2026-09-13T19:27:17.405Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "17",
+    "object_repr": "dior-handbag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2026-09-13T23:55:37.677Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Gucci Dionysus Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2026-09-13T23:55:46.569Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Fendi Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2026-09-13T23:55:58.912Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Channel Mini Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\", \"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2026-09-13T23:56:13.324Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "4",
+    "object_repr": "long champ mini bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2026-09-13T23:56:27.543Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "5",
+    "object_repr": "Zadig&Voltaire Rock Leather-Shoulder bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sale price\", \"Is on sale\", \"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2026-09-13T23:56:43.566Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Stella McCarteny Falabella",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\", \"Is best seller\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2026-09-13T23:56:59.066Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "5",
+    "object_repr": "Zadig&Voltaire Rock Leather-Shoulder bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2026-09-13T23:57:05.914Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "6",
+    "object_repr": "Stella McCarteny Falabella",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2026-09-13T23:57:16.064Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "7",
+    "object_repr": "Lacoste",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\", \"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2026-09-13T23:57:24.711Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "5",
+    "object_repr": "Zadig&Voltaire Rock Leather-Shoulder bag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2026-09-13T23:57:36.075Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "8",
+    "object_repr": "Chanel 25 Small-HandBag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2026-09-13T23:57:53.804Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "9",
+    "object_repr": "Channel-handbag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sale price\", \"Is on sale\", \"Page\", \"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2026-09-13T23:58:02.959Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "10",
+    "object_repr": "Ala∩a Le Coeur Leather-Crossbody Bag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\", \"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2026-09-13T23:58:09.345Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "8",
+    "object_repr": "Chanel 25 Small-HandBag",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2026-09-13T23:58:18.584Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "11",
+    "object_repr": "Small leather Channel",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\", \"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2026-09-13T23:58:27.598Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "12",
+    "object_repr": "miu miu-crossbody",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2026-09-13T23:58:40.918Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "13",
+    "object_repr": "Golden Goose Star-Crossbody",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\", \"Stock\", \"Is best seller\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2026-09-13T23:58:49.124Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "13",
+    "object_repr": "Golden Goose Star-Crossbody",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2026-09-13T23:58:57.059Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "14",
+    "object_repr": "Coach-MiniBag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\", \"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2026-09-13T23:59:04.693Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "15",
+    "object_repr": "Coach Quilted Tabby 26 Black-ShoulderBag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2026-09-13T23:59:12.062Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "15",
+    "object_repr": "Coach Quilted Tabby 26 Black-ShoulderBag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Page\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2026-09-13T23:59:18.367Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "17",
+    "object_repr": "dior-handbag",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2026-09-16T21:43:40.105Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "deliveryzone"
+    ],
+    "object_id": "1",
+    "object_repr": "dakahlia",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2026-09-16T21:45:25.269Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "deliveryzone"
+    ],
+    "object_id": "1",
+    "object_repr": "Dakahlia",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Governorate\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2026-09-16T23:14:59.100Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "policy"
+    ],
+    "object_id": "1",
+    "object_repr": "Our Policy",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2026-09-16T23:20:19.293Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "policy"
+    ],
+    "object_id": "1",
+    "object_repr": "Our Policy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2026-09-16T23:25:15.311Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "policy"
+    ],
+    "object_id": "1",
+    "object_repr": "Our Policy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2026-09-16T23:58:45.967Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "policy"
+    ],
+    "object_id": "1",
+    "object_repr": "Our Policy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"No refunds text\", \"Inspection text\", \"Refused text\", \"Damaged text\", \"Confirmation text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2026-09-17T00:19:04.484Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Saint Laurent-cardholder",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2026-09-17T00:20:21.667Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "19",
+    "object_repr": "Louis Vuitton Monogram Belt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2026-09-17T00:20:28.521Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Saint Laurent-cardholder",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Stock\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2026-09-17T02:54:07.367Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Saint Laurent-cardholder",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - Red\"}}, {\"added\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - Silver\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2026-09-17T03:03:19.845Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Saint Laurent-cardholder",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - Red - One Size\", \"fields\": [\"Size\"]}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - Silver - One Size\", \"fields\": [\"Size\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2026-09-17T03:17:14.613Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Saint Laurent-cardholder",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - black\"}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - Red - One Size\", \"fields\": [\"Image url\"]}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - White\", \"fields\": [\"Color\", \"Size\", \"Image url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2026-09-17T03:42:58.405Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Saint Laurent-cardholder",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - Red\", \"fields\": [\"Price\"]}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - White\", \"fields\": [\"Price\"]}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - black\", \"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2026-09-17T03:48:55.629Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Saint Laurent-cardholder",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is on sale\"]}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - Red\", \"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2026-09-17T03:54:04.479Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Saint Laurent-cardholder",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sale price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2026-09-17T04:04:12.582Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Saint Laurent-cardholder",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Sale price\", \"Is on sale\"]}}, {\"changed\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - Red\", \"fields\": [\"Price\", \"Sale price\", \"Is on sale\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2026-09-17T04:04:35.629Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Saint Laurent-cardholder",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is on sale\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2026-09-17T21:51:01.466Z",
+    "user": [
+      "maram"
+    ],
+    "content_type": [
+      "store",
+      "product"
+    ],
+    "object_id": "18",
+    "object_repr": "Saint Laurent-cardholder",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"product variant\", \"object\": \"Saint Laurent-cardholder - Red\", \"fields\": [\"Stock\"]}}]"
+  }
+}
+]

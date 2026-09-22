@@ -6,13 +6,14 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'HIDDEN')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = [
     'kizmie.vercel.app',
     'localhost',
     '127.0.0.1',
+    '192.168.1.12',
 ]
 CSRF_TRUSTED_ORIGINS = [
     'https://kizmie.vercel.app',
